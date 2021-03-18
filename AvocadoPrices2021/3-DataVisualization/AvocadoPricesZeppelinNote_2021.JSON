@@ -1,0 +1,577 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%sh\r\n\r\nls /qh/qhdata/",
+      "user": "admin",
+      "dateUpdated": "2021-02-23T12:13:02+0000",
+      "config": {
+        "colWidth": 6,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614078749630_426284237",
+      "id": "paragraph_1614078749630_426284237",
+      "dateCreated": "2021-02-23T11:12:29+0000",
+      "dateStarted": "2021-02-23T11:12:39+0000",
+      "dateFinished": "2021-02-23T11:12:39+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:48949"
+    },
+    {
+      "text": "%sh\r\n\r\n# rm -r /qh/qhdata/",
+      "user": "admin",
+      "dateUpdated": "2021-02-23T12:13:06+0000",
+      "config": {
+        "colWidth": 6,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614078770637_1457184876",
+      "id": "paragraph_1614078770637_1457184876",
+      "dateCreated": "2021-02-23T11:12:50+0000",
+      "dateStarted": "2021-02-23T11:13:00+0000",
+      "dateFinished": "2021-02-23T11:13:00+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:48950"
+    },
+    {
+      "text": "%sh\r\n\r\ncat /qh/qhdata/avocado-updated-2020.a7e228a3-3afb-4dc4-b04a-be32d0e0c872.csv",
+      "user": "admin",
+      "dateUpdated": "2021-02-23T12:13:08+0000",
+      "config": {
+        "colWidth": 6,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614078461852_358250129",
+      "id": "paragraph_1614078461852_358250129",
+      "dateCreated": "2021-02-23T11:07:41+0000",
+      "dateStarted": "2021-02-23T12:13:08+0000",
+      "dateFinished": "2021-02-23T12:13:10+0000",
+      "status": "ABORT",
+      "$$hashKey": "object:48951"
+    },
+    {
+      "text": "%spark\r\n\r\nval AP = spark.read.load(\"/qh/qhdata/AP_ENTITY_2021\")\r\nAP.createOrReplaceTempView(\"AVOCADO_PRICES\")\r\nAP.printSchema()",
+      "user": "admin",
+      "dateUpdated": "2021-02-23T12:12:39+0000",
+      "config": {
+        "colWidth": 6,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614078544303_274551933",
+      "id": "paragraph_1614078544303_274551933",
+      "dateCreated": "2021-02-23T11:09:04+0000",
+      "dateStarted": "2021-02-23T11:14:05+0000",
+      "dateFinished": "2021-02-23T11:14:07+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:48952"
+    },
+    {
+      "text": "%spark.sql\n\n-- AVERAGE PRICE PER DATE DEFINED IN INPUT FIELDS\nSELECT AP_DATE_PHYS as Ap_Date, AP_AVG_PRICE_PHYS as Average_Price FROM AVOCADO_PRICES\nWHERE AP_DATE_PHYS LIKE \"__/${Month=01}/${Year=2015}\"",
+      "user": "admin",
+      "dateUpdated": "2021-02-23T13:05:28+0000",
+      "config": {
+        "colWidth": 6,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "lineChart",
+              "height": 196,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "Ap_Date": "string",
+                      "Average_Price": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "Ap_Date",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "Average_Price",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {
+          "Month": "01",
+          "Year": "2015"
+        },
+        "forms": {
+          "Month": {
+            "type": "TextBox",
+            "name": "Month",
+            "displayName": "Month",
+            "defaultValue": "01",
+            "hidden": false,
+            "$$hashKey": "object:50305"
+          },
+          "Year": {
+            "type": "TextBox",
+            "name": "Year",
+            "displayName": "Year",
+            "defaultValue": "2015",
+            "hidden": false,
+            "$$hashKey": "object:50306"
+          }
+        }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614078694721_539933534",
+      "id": "paragraph_1614078694721_539933534",
+      "dateCreated": "2021-02-23T11:11:34+0000",
+      "dateStarted": "2021-02-23T12:11:53+0000",
+      "dateFinished": "2021-02-23T12:11:54+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:48953"
+    },
+    {
+      "text": "%spark.sql\n\n-- AVERAGE PRICE IN REGIONS FOR DATE DEFINED IN INPUT FIELDS\nSELECT AP_DATE_PHYS as Ap_Date, AP_AVG_PRICE_PHYS as Average_Price, AP_REGION_PHYS as Region\nFROM AVOCADO_PRICES WHERE AP_DATE_PHYS LIKE \"__/${Month=01}/${Year=2015}\"",
+      "user": "admin",
+      "dateUpdated": "2021-02-23T13:33:28+0000",
+      "config": {
+        "colWidth": 6,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "stackedAreaChart",
+              "height": 196,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "Ap_Date": "string",
+                      "Average_Price": "string",
+                      "Region": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "hide",
+                  "style": "stack"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "Region",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [
+                {
+                  "name": "Ap_Date",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "Average_Price",
+                  "index": 1,
+                  "aggr": "avg"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {
+          "Month": "01",
+          "Year": "2015"
+        },
+        "forms": {
+          "Month": {
+            "type": "TextBox",
+            "name": "Month",
+            "displayName": "Month",
+            "defaultValue": "01",
+            "hidden": false,
+            "$$hashKey": "object:50283"
+          },
+          "Year": {
+            "type": "TextBox",
+            "name": "Year",
+            "displayName": "Year",
+            "defaultValue": "2015",
+            "hidden": false,
+            "$$hashKey": "object:50284"
+          }
+        }
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614082313821_680873753",
+      "id": "paragraph_1614082313821_680873753",
+      "dateCreated": "2021-02-23T12:11:53+0000",
+      "dateStarted": "2021-02-23T12:16:18+0000",
+      "dateFinished": "2021-02-23T12:16:20+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:48954"
+    },
+    {
+      "text": "%spark.sql\n\n-- Total number of avocados sold per year for every region\nSELECT AP_REGION_PHYS AS Region, AP_YEAR_PHYS AS Year, SUM(AP_TOT_VOLUME_PHYS) AS Sold\nFROM AVOCADO_PRICES\nGROUP BY AP_REGION_PHYS, AP_YEAR_PHYS\nORDER BY AP_REGION_PHYS ASC, AP_YEAR_PHYS ASC",
+      "user": "admin",
+      "dateUpdated": "2021-02-23T13:25:27+0000",
+      "config": {
+        "colWidth": 6,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "stackedAreaChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "AP_REGION_PHYS": "string",
+                      "AP_YEAR_PHYS": "string",
+                      "AVERAGE_SOLD": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "style": "stack"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "Region",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [
+                {
+                  "name": "Year",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ],
+              "values": [
+                {
+                  "name": "Sold",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614082578606_926812055",
+      "id": "paragraph_1614082578606_926812055",
+      "dateCreated": "2021-02-23T12:16:18+0000",
+      "dateStarted": "2021-02-23T13:07:33+0000",
+      "dateFinished": "2021-02-23T13:07:36+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:48955"
+    },
+    {
+      "text": "%spark.sql\n\n-- Total number of avocados sold by type\nSELECT SUM(AP_TOT_VOLUME_PHYS) as Sold, AP_TYPE_PHYS as Ap_Type\nFROM AVOCADO_PRICES\nGROUP BY AP_TYPE_PHYS",
+      "user": "admin",
+      "dateUpdated": "2021-02-23T13:29:38+0000",
+      "config": {
+        "colWidth": 6,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "pieChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "Sold": "string",
+                      "Ap_Type": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "stacked": false
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "pieChart": {}
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "Ap_Type",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "Sold",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614082946751_1360998203",
+      "id": "paragraph_1614082946751_1360998203",
+      "dateCreated": "2021-02-23T12:22:26+0000",
+      "dateStarted": "2021-02-23T13:21:09+0000",
+      "dateFinished": "2021-02-23T13:21:10+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:48956"
+    }
+  ],
+  "name": "Avocado Prices 2021",
+  "id": "2FY4ZJBSE",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview2",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Avocado Prices 2021"
+}

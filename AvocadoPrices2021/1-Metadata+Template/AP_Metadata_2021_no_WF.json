@@ -1,0 +1,173 @@
+{
+    "Schemas": [
+		{
+			"SchemaId": "AP_METADATA",
+			"TargetRef": "SPARK",
+			"Name": "AP_METADATA",
+			"RootTag": "",
+			"ObjectTag": "RECORD",
+			"Owner": "n/a",
+			"Prefix": "n/a",
+			"Suffix": "n/a",
+			"IsLogical": "N"
+		}
+	],
+	"Entities": [
+		{
+			"EntityId": "AP_ENTITY_2021",
+			"Name": "AP_ENTITY_2021",
+			"Tag": "AP_ENTITY_2021",
+			"Description": "Avocado Prices 2021",
+			"FormalName": "AP_ENTITY_2021",
+			"IdColumnRef": "n/a",
+			"IsRepeatable": "N",
+			"IsHierarchical": "N",
+			"SortOrder": 100,
+			"Columns": [
+				{
+					"ColumnId": "AP_DATE",
+					"PhysicalName": "AP_DATE",
+					"Description": "The Date Of The Observation",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "D",
+					"SortOrder": 10
+				},
+				{
+					"ColumnId": "AP_AVG_PRICE",
+					"PhysicalName": "AP_AVG_PRICE",
+					"Description": "The Average Price Of A Single Avocado",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 20
+				},
+				{
+					"ColumnId": "AP_TOT_VOLUME",
+					"PhysicalName": "AP_TOT_VOLUME",
+					"Description": "The Total Number Of Avocados Sold",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 30
+				},
+				{
+					"ColumnId": "AP_4046",
+					"PhysicalName": "AP_4046",
+					"Description": "The Total Number Of Avocados With PLU 4046 Sold",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 40
+				},
+				{
+					"ColumnId": "AP_4225",
+					"PhysicalName": "AP_4225",
+					"Description": "The Total Number Of Avocados With PLU 4225 Sold",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 50
+				},
+				{
+					"ColumnId": "AP_4770",
+					"PhysicalName": "AP_4770",
+					"Description": "The Total Number Of Avocados With PLU 4770 Sold",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 60
+				},
+				{
+					"ColumnId": "AP_TOT_BAGS",
+					"PhysicalName": "AP_TOT_BAGS",
+					"Description": "The Total Number Of Avocado Bags Sold",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 70
+				},
+				{
+					"ColumnId": "AP_S_BAGS",
+					"PhysicalName": "AP_S_BAGS",
+					"Description": "The Total Number Of Small Avocado Bags Sold",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 80
+				},
+				{
+					"ColumnId": "AP_L_BAGS",
+					"PhysicalName": "AP_L_BAGS",
+					"Description": "The Total Number Of Large Avocado Bags Sold",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 90
+				},
+				{
+					"ColumnId": "AP_XL_BAGS",
+					"PhysicalName": "AP_XL_BAGS",
+					"Description": "The Total Number Of Extra Large Avocado Bags Sold",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 100
+				},
+				{
+					"ColumnId": "AP_TYPE",
+					"PhysicalName": "AP_TYPE",
+					"Description": "Conventional Or Organic",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 110
+				},
+				{
+					"ColumnId": "AP_YEAR",
+					"PhysicalName": "AP_YEAR",
+					"Description": "The Year (yes, the best description I could come up with)",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 120
+				},
+				{
+					"ColumnId": "AP_REGION",
+					"PhysicalName": "AP_REGION",
+					"Description": "The City Or Region Of The Observation",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 130
+				}
+			]
+		}
+	]
+}

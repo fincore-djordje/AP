@@ -1,0 +1,96 @@
+{
+    "Schemas": [
+		{
+			"SchemaId": "Min_Max_Checks",
+			"TargetRef": "SPARK",
+			"Name": "Min_Max_Checks",
+			"RootTag": "",
+			"ObjectTag": "RECORD",
+			"Owner": "n/a",
+			"Prefix": "n/a",
+			"Suffix": "n/a",
+			"IsLogical": "N"
+		}
+	],
+	"Entities": [
+		{
+			"EntityId": "Min_Max_Checks",
+			"Name": "Min_Max_Checks",
+			"Tag": "Min_Max_Checks",
+			"Description": "Description Min Max Checks",
+			"FormalName": "Min_Max_Checks",
+			"IdColumnRef": "n/a",
+			"IsRepeatable": "N",
+			"IsHierarchical": "N",
+			"SortOrder": 100,
+			"Columns": [
+				{
+					"ColumnId": "MinMax",
+					"PhysicalName": "MinMax",
+					"Description": "Decription MinMax",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 10,
+					"Properties": [
+						{
+							"PropertyRef": "Validation.MinValueOrLength",
+							"PropertyValue": "10"
+						},
+						{
+							"PropertyRef": "Validation.MaxValueOrLength",
+							"PropertyValue": "50"
+						}
+					]
+				},
+				{
+					"ColumnId": "Min",
+					"PhysicalName": "Min",
+					"Description": "Decription Min",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 20,
+					"Properties": [
+						{
+							"PropertyRef": "Validation.MinValueOrLength",
+							"PropertyValue": "5"
+						}
+					]
+				},
+				{
+					"ColumnId": "Max",
+					"PhysicalName": "Max",
+					"Description": "Decription Max",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 30,
+					"Properties": [
+						{
+							"PropertyRef": "Validation.MaxValueOrLength",
+							"PropertyValue": "75"
+						}
+					]
+				},
+				{
+					"ColumnId": "ExpectedOutcome",
+					"PhysicalName": "ExpectedOutcome",
+					"Description": "Decription Expected Outcome",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 40
+				}
+			]
+		}
+	]
+}

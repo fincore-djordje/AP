@@ -1,0 +1,260 @@
+{
+	"Schemas": [{
+		"SchemaId": "MinMax_6_partitions",
+		"TargetRef": "SPARK",
+		"Name": "MinMax_6_partitions",
+		"RootTag": "",
+		"ObjectTag": "RECORD",
+		"Owner": "n/a",
+		"Prefix": "n/a",
+		"Suffix": "n/a",
+		"IsLogical": "N"
+	}],
+	"Entities": [{
+		"EntityId": "MinMax_6_partitions",
+		"Name": "MinMax_6_partitions",
+		"Tag": "MinMax_6_partitions",
+		"Description": "Description MinMax_6_partitions",
+		"FormalName": "MinMax_6_partitions",
+		"IdColumnRef": "n/a",
+		"IsRepeatable": "N",
+		"IsHierarchical": "N",
+		"SortOrder": 100,
+		"Columns": [{
+				"ColumnId": "MinMax",
+				"PhysicalName": "MinMax",
+				"Description": "Decription MinMax",
+				"IsRequired": "Y",
+				"IsIndexed": "N",
+				"IsCalculated": "N",
+				"Format": "?",
+				"Datatype": "N",
+				"SortOrder": 10,
+				"Properties": [{
+						"PropertyRef": "Validation.MinValueOrLength",
+						"PropertyValue": "10"
+					},
+					{
+						"PropertyRef": "Validation.MaxValueOrLength",
+						"PropertyValue": "50"
+					}
+				]
+			},
+			{
+				"ColumnId": "Min",
+				"PhysicalName": "Min",
+				"Description": "Decription Min",
+				"IsRequired": "Y",
+				"IsIndexed": "N",
+				"IsCalculated": "N",
+				"Format": "?",
+				"Datatype": "N",
+				"SortOrder": 20,
+				"Properties": [{
+					"PropertyRef": "Validation.MinValueOrLength",
+					"PropertyValue": "5"
+				}]
+			},
+			{
+				"ColumnId": "Max",
+				"PhysicalName": "Max",
+				"Description": "Decription Max",
+				"IsRequired": "Y",
+				"IsIndexed": "N",
+				"IsCalculated": "N",
+				"Format": "?",
+				"Datatype": "N",
+				"SortOrder": 30,
+				"Properties": [{
+					"PropertyRef": "Validation.MaxValueOrLength",
+					"PropertyValue": "75"
+				}]
+			},
+			{
+				"ColumnId": "ExpectedOutcome",
+				"PhysicalName": "ExpectedOutcome",
+				"Description": "Decription Expected Outcome",
+				"IsRequired": "Y",
+				"IsIndexed": "N",
+				"IsCalculated": "N",
+				"Format": "?",
+				"Datatype": "S",
+				"SortOrder": 40
+			},
+			{
+				"ColumnId": "Index",
+				"PhysicalName": "Index",
+				"Description": "Decription Index",
+				"IsRequired": "Y",
+				"IsIndexed": "N",
+				"IsCalculated": "N",
+				"Format": "?",
+				"Datatype": "N",
+				"SortOrder": 50,
+				"Properties": [{
+					"PropertyRef": "qH_IDENTIFIER",
+					"PropertyValue": "Y"
+				}]
+			},
+			{
+				"ColumnId": "Version",
+				"PhysicalName": "Version",
+				"Description": "Decription Version",
+				"IsRequired": "Y",
+				"IsIndexed": "N",
+				"IsCalculated": "N",
+				"Format": "?",
+				"Datatype": "N",
+				"SortOrder": 60,
+				"Properties": [{
+					"PropertyRef": "qH_VERSION",
+					"PropertyValue": "Y"
+				}]
+			},
+			{
+				"ColumnId": "Date",
+				"PhysicalName": "Date",
+				"Description": "Decription date",
+				"IsRequired": "Y",
+				"IsIndexed": "N",
+				"IsCalculated": "N",
+				"Format": "yyyy-MM-dd",
+				"Datatype": "D",
+				"SortOrder": 70,
+				"Properties": [{
+					"PropertyRef": "qH_TIMESTAMP",
+					"PropertyValue": "Y"
+				}]
+			},
+			{
+				"ColumnId": "Unique_value",
+				"PhysicalName": "Unique_value",
+				"Description": "Unique_value",
+				"IsRequired": "Y",
+				"IsIndexed": "N",
+				"IsCalculated": "N",
+				"Format": "?",
+				"Datatype": "N",
+				"SortOrder": 80
+			}
+		]
+	}],
+	"PropertyTypes": [{
+			"PropertyTypeId": "Validation",
+			"Name": "Validation Constraints"
+		},
+		{
+			"PropertyTypeId": "qH_Properties",
+			"Name": "QueryHub Properties used for Proxying Upstream Data"
+		}
+	],
+	"Properties": [{
+			"PropertyId": "Validation.MaxValueOrLength",
+			"Name": "Maximum Value (As String), Otherwise Length",
+			"PropertyTypeRef": "Validation",
+			"ValueType": "S"
+		},
+		{
+			"PropertyId": "Validation.MinValueOrLength",
+			"Name": "Minimum Value (As String), Otherwise Length",
+			"PropertyTypeRef": "Validation",
+			"ValueType": "S"
+		},
+		{
+			"PropertyId": "qH_CATEGORY",
+			"Name": "Used for grouping information into discrete Datasets",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		},
+		{
+			"PropertyId": "qH_IDENTIFIER",
+			"Name": "Unique identifier of a transaction",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		},
+		{
+			"PropertyId": "qH_VERSION",
+			"Name": "The version of a transaction",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		},
+		{
+			"PropertyId": "qH_TIMESTAMP",
+			"Name": "The persisted timestamp of a transaction",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		},
+		{
+			"PropertyId": "qH_ROWID",
+			"Name": "qH_ROWID",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_DATASOURCE",
+			"Name": " qH_DATASOURCE",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_SOURCEDATE",
+			"Name": " qH_SOURCEDATE",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_ROWID",
+			"Name": " qH_ROWID",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_PARTITION_1",
+			"Name": " qH_PARTITION_1",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_PARTITION_2",
+			"Name": " qH_PARTITION_2",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_PARTITION_3",
+			"Name": " qH_PARTITION_3",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_IS_VALID",
+			"Name": " qH_IS_VALID",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_VALID_FROM",
+			"Name": " qH_VALID_FROM",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_VALID_UNTIL",
+			"Name": " qH_VALID_UNTIL",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_CORRECT_FROM",
+			"Name": " qH_CORRECT_FROM",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_CORRECT_UNTIL",
+			"Name": " qH_CORRECT_UNTIL",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_TIMESTAMP_INSERTED",
+			"Name": " qH_TIMESTAMP_INSERTED",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}, {
+			"PropertyId": "qH_TIMESTAMP_LASTUPDATED",
+			"Name": " qH_TIMESTAMP_LASTUPDATED",
+			"PropertyTypeRef": "qH_Properties",
+			"ValueType": "S"
+		}
+
+	]
+}

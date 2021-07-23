@@ -1,0 +1,771 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "\r\n%sh\r\nls /qh/qhdata/",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:04:09+0000",
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543409_1096236067",
+      "id": "paragraph_1614078749630_426284237",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:09+0000",
+      "dateFinished": "2021-03-03T17:04:09+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:17931"
+    },
+    {
+      "text": "%sh\r\n\r\n# rm -r /qh/qhdata/*",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:04:09+0000",
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_403532486",
+      "id": "paragraph_1614078770637_1457184876",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:09+0000",
+      "dateFinished": "2021-03-03T17:04:09+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17932"
+    },
+    {
+      "text": "%spark\r\n\r\nval AP_CND = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_CND\")\r\nAP_CND.createOrReplaceTempView(\"MIN_MAX_CND\")\r\nAP_CND.printSchema()",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:04:09+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_1990850192",
+      "id": "paragraph_1614078544303_274551933",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:09+0000",
+      "dateFinished": "2021-03-03T17:04:10+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17933"
+    },
+    {
+      "text": "%spark\r\n\r\nval AP_ERR = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_ERR\")\r\nAP_ERR.createOrReplaceTempView(\"MIN_MAX_ERR\")\r\nAP_ERR.printSchema()",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:04:10+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_1575359884",
+      "id": "paragraph_1614705735205_623845052",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:10+0000",
+      "dateFinished": "2021-03-03T17:04:10+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17934"
+    },
+    {
+      "text": "%spark\r\n\r\nval AP_STG = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_STG\")\r\nAP_STG.createOrReplaceTempView(\"MIN_MAX_STG\")\r\nAP_STG.printSchema()",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:04:10+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_1032867839",
+      "id": "paragraph_1614705739749_2048844703",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:10+0000",
+      "dateFinished": "2021-03-03T17:04:10+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17935"
+    },
+    {
+      "text": "%spark\n\nval AP_CMP = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_CMP\")\nAP_CMP.createOrReplaceTempView(\"MIN_MAX_CMP\")\nAP_CMP.printSchema()",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:04:10+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_1242419976",
+      "id": "paragraph_1614706139144_1241918884",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:10+0000",
+      "dateFinished": "2021-03-03T17:04:11+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17936"
+    },
+    {
+      "text": "%spark\n\nval AP_RCP = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_RCP\")\nAP_RCP.createOrReplaceTempView(\"MIN_MAX_RCP\")\nAP_RCP.printSchema()",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:04:11+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_290341101",
+      "id": "paragraph_1614706145601_542810003",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:11+0000",
+      "dateFinished": "2021-03-03T17:04:11+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17937"
+    },
+    {
+      "text": "%spark\r\n\r\nval AP_DUP = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_DUP\")\r\nAP_DUP.createOrReplaceTempView(\"MIN_MAX_DUP\")\r\nAP_DUP.printSchema()",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:04:11+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_862690139",
+      "id": "paragraph_1614706142397_1531678926",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:11+0000",
+      "dateFinished": "2021-03-03T17:04:11+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17938"
+    },
+    {
+      "text": "%spark.sql\nSELECT count(*) FROM MIN_MAX_CND",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:04:42+0000",
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 132.031,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=21",
+              "$$hashKey": "object:18650"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_1959638651",
+      "id": "paragraph_1614705974745_696433505",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:11+0000",
+      "dateFinished": "2021-03-03T17:04:11+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17939"
+    },
+    {
+      "text": "%spark.sql\nSELECT count(*) FROM MIN_MAX_ERR",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:04:46+0000",
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 135.488,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=22",
+              "$$hashKey": "object:18698"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_908667537",
+      "id": "paragraph_1614705984539_1933511876",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:12+0000",
+      "dateFinished": "2021-03-03T17:04:12+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17940"
+    },
+    {
+      "text": "%spark.sql\nSELECT count(*) FROM MIN_MAX_STG",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:05:05+0000",
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 140.039,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=23",
+              "$$hashKey": "object:18746"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_1358950408",
+      "id": "paragraph_1614706096809_2145079848",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:12+0000",
+      "dateFinished": "2021-03-03T17:04:12+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17941"
+    },
+    {
+      "text": "%spark.sql\nSELECT count(*) FROM MIN_MAX_CMP",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:05:13+0000",
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 139.961,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "count(1)0",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {
+                          "priority": 0,
+                          "direction": "asc"
+                        },
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1,
+                      "paginationPageSize": 250
+                    }
+                  },
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [],
+              "groups": [],
+              "values": []
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {
+          "Month": "01",
+          "Year": "2015"
+        },
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=24",
+              "$$hashKey": "object:18794"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_478983858",
+      "id": "paragraph_1614078694721_539933534",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:12+0000",
+      "dateFinished": "2021-03-03T17:04:13+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17942"
+    },
+    {
+      "text": "%spark.sql\n\nSELECT count(*) FROM MIN_MAX_RCP",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:05:41+0000",
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 130.039,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=25",
+              "$$hashKey": "object:18842"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_1225340502",
+      "id": "paragraph_1614698167338_1405599675",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:13+0000",
+      "dateFinished": "2021-03-03T17:04:13+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17943"
+    },
+    {
+      "text": "%spark.sql\n\nSELECT count(*) FROM MIN_MAX_DUP",
+      "user": "admin",
+      "dateUpdated": "2021-03-03T17:05:37+0000",
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 130.039,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=26",
+              "$$hashKey": "object:18890"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1614789543410_1944039500",
+      "id": "paragraph_1614705808952_9764200",
+      "dateCreated": "2021-03-03T16:39:03+0000",
+      "dateStarted": "2021-03-03T17:04:13+0000",
+      "dateFinished": "2021-03-03T17:04:13+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:17944"
+    }
+  ],
+  "name": "T2_Min_Max_Checks_Notebook",
+  "id": "2FZF8P27N",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview2",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": true,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {
+    "isRunning": false
+  },
+  "path": "/T2_Min_Max_Checks_Notebook"
+}

@@ -1,0 +1,225 @@
+{
+	"Schemas": [
+		{
+			"SchemaId": "TSV_DATASET_SCHEMA",
+			"TargetRef": "SPARK",
+			"Name": "TSV_DATASET_SCHEMA_NAME",
+			"RootTag": "TSV_DATASET_SCHEMA_ROOT_TAG",
+			"ObjectTag": "TSV_DATASET_SCHEMA_OBJECT_TAG",
+			"Owner": "TSV_DATASET_SCHEMA_OWNER",
+			"Prefix": "RAR_PREFIX",
+			"Suffix": "RAR_SUFFIX",
+			"IsLogical": "N"
+		}
+	],
+	"Entities": [
+		{
+			"EntityId": "TSV_ENTITY",
+			"Name": "TSV_ENTITY_NAME",
+			"Tag": "TSV_ENTITY_TAG",
+			"Description": "TSV dataset",
+			"FormalName": "TSV_ENTITY_FORMAL_NAME",
+			"IdColumnRef": "TSV_ENTITY_ID_COL_REF",
+			"IsRepeatable": "N",
+			"IsHierarchical": "N",
+			"SortOrder": 10,
+			"Columns": [
+				{
+					"ColumnId": "TSV_minMax",
+					"PhysicalName": "TSV_minMax_PHYS",
+					"Description": "Min Max column",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 10
+				},
+				{
+					"ColumnId": "TSV_min",
+					"PhysicalName": "TSV_min_PHYS",
+					"Description": "Min column",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 20
+				},
+				{
+					"ColumnId": "TSV_max",
+					"PhysicalName": "TSV_max_PHYS",
+					"Description": "Max column",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 30
+				},
+				{
+					"ColumnId": "TSV_Outcome",
+					"PhysicalName": "TSV_Outcome_PHYS",
+					"Description": "The expected outcome column",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 40
+				}
+			]
+		}
+	],
+	"Tables": [
+		{
+			"SchemaRef": "TSV_DATASET_SCHEMA",
+			"EntityRef": "TSV_ENTITY",
+			"SortOrder": 10,
+			"Columns": [
+				{
+					"ColumnRef": "TSV_minMax",
+					"SortOrder": 10
+				},
+				{
+					"ColumnRef": "TSV_min",
+					"SortOrder": 20
+				},
+				{
+					"ColumnRef": "TSV_max",
+					"SortOrder": 30
+				},
+				{
+					"ColumnRef": "TSV_Outcome",
+					"SortOrder": 40
+				}
+			]
+		}
+	],
+	"Outputs": [
+		{
+			"OutputId": "TSV_OUTPUT",
+			"SchemaRef": "#ANY_TABLE#",
+			"Name": "TSV_OUTPUT_NAME",
+			"Description": "Output Of TSV dataset",
+			"Tag": "TSV_OUTPUT_TAG",
+			"Tables": [
+				{
+					"TableRef": "#ANY_TABLE#",
+					"TableAlias": "#ANY_TABLE#",
+					"SortOrder": 10,
+					"Columns": [
+						{
+							"OutputColumnId": "TSV_minMax_PHYS",
+							"IsVisible": "Y",
+							"IsInsertable": "Y",
+							"IsEditable": "Y",
+							"IsRequired": "Y",
+							"ColumnRef": "COL0",
+							"SortOrder": 10
+						},
+						{
+							"OutputColumnId": "TSV_min_PHYS",
+							"IsVisible": "Y",
+							"IsInsertable": "Y",
+							"IsEditable": "Y",
+							"IsRequired": "Y",
+							"ColumnRef": "COL1",
+							"SortOrder": 20
+						},
+						{
+							"OutputColumnId": "TSV_max_PHYS",
+							"IsVisible": "Y",
+							"IsInsertable": "Y",
+							"IsEditable": "Y",
+							"IsRequired": "Y",
+							"ColumnRef": "COL2",
+							"SortOrder": 30
+						},
+						{
+							"OutputColumnId": "TSV_Outcome_PHYS",
+							"IsVisible": "Y",
+							"IsInsertable": "Y",
+							"IsEditable": "Y",
+							"IsRequired": "Y",
+							"ColumnRef": "COL3",
+							"SortOrder": 40
+						}
+					]
+				}
+			]
+		}
+	],
+	"Queries": [
+		{
+			"QueryId": "TSV_QUERY",
+			"SchemaRef": "#ANY_TABLE#",
+			"Name": "Stage TSV Data",
+			"IsDefaultedNull": "N",
+			"UseOutputTags": "N",
+			"Tag": "TSV_QUERY_TAG",
+			"Outputs": [
+				{
+					"OutputRef": "TSV_OUTPUT",
+					"SortOrder": 10
+				}
+			]
+		}
+	],
+	"Workflows": [
+		{
+			"WorkflowId": "TSV_WORKFLOW",
+			"TargetRef": "SPARK",
+			"Tag": "DATA",
+			"Name": "TSV Dataset",
+			"Description": "Bananaman",
+			"SortOrder": 0,
+			"IsRestartable": "Y",
+			"MaxRetryCount": 10,
+			"Properties": [
+				{
+					"PropertyRef": "WF-UPLOAD-TYPE",
+					"PropertyValue": "SINGLE"
+				}
+			],
+			"Blocks": [
+				{
+					"BlockId": "TSV_BLOCK",
+					"Name": "TSV_BLOCK_NAME",
+					"Description": "TSV Block",
+					"SortOrder": 10,
+					"Steps": [
+						{
+							"StepRef": "TSV_WORKFLOW_STEP",
+							"SortOrder": 10
+						}
+					]
+				}
+			],
+			"Steps": [
+				{
+					"StepId": "TSV_WORKFLOW_STEP",
+					"Name": "TSV_WORKFLOW_STEP_NAME",
+					"Description": "TSV Workflow Step",
+					"QueryRef": "TSV_QUERY",
+					"Action": "BULKINSERT",
+					"ExecutionEngine": "FDM3CAP",
+					"SortOrder": 20,
+					"StepTargets": {
+						"TargetSchemaRef": "TSV_DATASET_SCHEMA",
+						"TargetTableRef": "TSV_ENTITY"
+					}
+				}
+			],
+			"Variables": [
+				{
+					"VariableId": "#COMMENT#",
+					"Name": "COMMENT",
+					"DataType": "S",
+					"DefaultValue": "TSV READY DATASET",
+					"SortOrder": 30
+				}
+			]
+		}
+	]
+}

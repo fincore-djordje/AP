@@ -1,0 +1,15 @@
+ColumnId,PhysicalName,Description,IsRequired,IsIndexed,IsCalculated,Format,Datatype,SortOrder
+AP_DATE,AP_DATE_PHYS,The Date Of The Observation,Y,N,N,date,D,10
+AP_AVG_PRICE,AP_AVG_PRICE_PHYS,The Average Price Of A Single Avocado,Y,N,N,^(?:[0-9]+(?:[.]{1}[0-9]+)?)?$,N,20
+AP_TOT_VOLUME,AP_TOT_VOLUME_PHYS,The Total Number Of Avocados Sold,Y,N,N,^(?:[0-9]+(?:[.]{1}[0-9]+)?)?$,N,30
+AP_4046,AP_4046_PHYS,The Total Number Of Avocados With PLU 4046 Sold,Y,N,N,^(?:[0-9]+(?:[.]{1}[0-9]+)?)?$,N,40
+AP_4225,AP_4225_PHYS,The Total Number Of Avocados With PLU 4225 Sold,Y,N,N,^(?:[0-9]+(?:[.]{1}[0-9]+)?)?$,N,50
+AP_4770,AP_4770_PHYS,The Total Number Of Avocados With PLU 4770 Sold,Y,N,N,^(?:[0-9]+(?:[.]{1}[0-9]+)?)?$,N,60
+AP_TOT_BAGS,AP_TOT_BAGS_PHYS,The Total Number Of Avocado Bags Sold,Y,N,N,^(?:[0-9]+(?:[.]{1}[0-9]+)?)?$,N,70
+AP_S_BAGS,AP_S_BAGS_PHYS,The Total Number Of Small Avocado Bags Sold,Y,N,N,^(?:[0-9]+(?:[.]{1}[0-9]+)?)?$,N,80
+AP_L_BAGS,AP_L_BAGS_PHYS,The Total Number Of Large Avocado Bags Sold,Y,N,N,^(?:[0-9]+(?:[.]{1}[0-9]+)?)?$,N,90
+AP_XL_BAGS,AP_XL_BAGS_PHYS,The Total Number Of Extra Large Avocado Bags Sold,Y,N,N,^(?:[0-9]+(?:[.]{1}[0-9]+)?)?$,N,100
+AP_TYPE,AP_TYPE_PHYS,Conventional Or Organic,Y,N,N,^(?:(?i)(?:conventional|organic))?$,S,110
+AP_YEAR,AP_YEAR_PHYS,"The Year (yes, the best description I could come up with)",Y,N,N,^(?:(?:19|20){1}[0-9]{2})?$,S,120
+AP_REGION,AP_REGION_PHYS,The City Or Region Of The Observation,Y,N,N,^[A-z\/\.[:blank:]]*$,S,130
+

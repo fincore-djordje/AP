@@ -1,0 +1,206 @@
+{
+    "Schemas": [
+		{
+			"SchemaId": "BF_METADATA",
+			"TargetRef": "SPARK",
+			"Name": "BF_METADATA",
+			"RootTag": "",
+			"ObjectTag": "RECORD",
+			"Owner": "n/a",
+			"Prefix": "n/a",
+			"Suffix": "n/a",
+			"IsLogical": "N"
+		}
+	],
+	"Entities": [
+		{
+			"EntityId": "BF_ENTITY",
+			"Name": "BF_ENTITY",
+			"Tag": "BF_ENTITY",
+			"Description": "Bank full",
+			"FormalName": "BF_ENTITY",
+			"IdColumnRef": "n/a",
+			"IsRepeatable": "N",
+			"IsHierarchical": "N",
+			"SortOrder": 100,
+			"Columns": [
+				{
+					"ColumnId": "AGE",
+					"PhysicalName": "AGE",
+					"Description": "AGE",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 10
+				},
+				{
+					"ColumnId": "JOB",
+					"PhysicalName": "JOB",
+					"Description": "JOB",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 20
+				},
+				{
+					"ColumnId": "EDUCATION",
+					"PhysicalName": "EDUCATION",
+					"Description": "EDUCATION",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 30
+				},
+				{
+					"ColumnId": "DEFAULT",
+					"PhysicalName": "DEFAULT",
+					"Description": "DEFAULT",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 40
+				},
+				{
+					"ColumnId": "BALANCE",
+					"PhysicalName": "BALANCE",
+					"Description": "BALANCE",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 50
+				},
+				{
+					"ColumnId": "HOUSING",
+					"PhysicalName": "HOUSING",
+					"Description": "HOUSING",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 60
+				},
+				{
+					"ColumnId": "LOAN",
+					"PhysicalName": "LOAN",
+					"Description": "LOAN",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 70
+				},
+				{
+					"ColumnId": "CONTACT",
+					"PhysicalName": "CONTACT",
+					"Description": "CONTACT",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 80
+				},
+				{
+					"ColumnId": "DAY",
+					"PhysicalName": "DAY",
+					"Description": "DAY",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 90
+				},
+				{
+					"ColumnId": "MONTH",
+					"PhysicalName": "MONTH",
+					"Description": "MONTH",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 100
+				},
+				{
+					"ColumnId": "DURATION",
+					"PhysicalName": "DURATION",
+					"Description": "DURATION",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 110
+				},
+				{
+					"ColumnId": "CAMPAIGN",
+					"PhysicalName": "CAMPAIGN",
+					"Description": "CAMPAIGN",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 120
+				},
+				{
+					"ColumnId": "PDAYS",
+					"PhysicalName": "PDAYS",
+					"Description": "PDAYS",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 130
+				},
+				{
+					"ColumnId": "PREVIOUS",
+					"PhysicalName": "PREVIOUS",
+					"Description": "PREVIOUS",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 140
+				},
+				{
+					"ColumnId": "POUTCOME",
+					"PhysicalName": "POUTCOME",
+					"Description": "POUTCOME",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 150
+				},
+				{
+					"ColumnId": "Y",
+					"PhysicalName": "Y",
+					"Description": "Y",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 160
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,225 @@
+{
+	"Schemas": [
+		{
+			"SchemaId": "MinMax_Schema",
+			"TargetRef": "SPARK",
+			"Name": "MinMax_Schema_Name",
+			"RootTag": "MinMax_Schema_RootTag",
+			"ObjectTag": "MinMax_Schema_ObjectTag",
+			"Owner": "MinMax_Schema_Owner",
+			"Prefix": "MinMax_PREFIX",
+			"Suffix": "MinMax_SUFFIX",
+			"IsLogical": "N"
+		}
+	],
+	"Entities": [
+		{
+			"EntityId": "MinMax_Entity",
+			"Name": "MinMax_Entity_Name",
+			"Tag": "MinMax_Entity_Tag",
+			"Description": "MinMax dataset",
+			"FormalName": "MinMax_Entity_FormalName",
+			"IdColumnRef": "MinMax_Entity_IdColRef",
+			"IsRepeatable": "N",
+			"IsHierarchical": "N",
+			"SortOrder": 10,
+			"Columns": [
+				{
+					"ColumnId": "MinMax",
+					"PhysicalName": "MinMax_Phys",
+					"Description": "Min Max column",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 10
+				},
+				{
+					"ColumnId": "Min",
+					"PhysicalName": "Min_Phys",
+					"Description": "Min column",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 20
+				},
+				{
+					"ColumnId": "Max",
+					"PhysicalName": "Max_Phys",
+					"Description": "Max column",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 30
+				},
+				{
+					"ColumnId": "Outcome",
+					"PhysicalName": "Outcome_Phys",
+					"Description": "The expected outcome column",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 40
+				}
+			]
+		}
+	],
+	"Tables": [
+		{
+			"SchemaRef": "MinMax_Schema",
+			"EntityRef": "MinMax_Entity",
+			"SortOrder": 10,
+			"Columns": [
+				{
+					"ColumnRef": "MinMax",
+					"SortOrder": 10
+				},
+				{
+					"ColumnRef": "Min",
+					"SortOrder": 20
+				},
+				{
+					"ColumnRef": "Max",
+					"SortOrder": 30
+				},
+				{
+					"ColumnRef": "Outcome",
+					"SortOrder": 40
+				}
+			]
+		}
+	],
+	"Outputs": [
+		{
+			"OutputId": "MinMax_Output",
+			"SchemaRef": "#ANY_TABLE#",
+			"Name": "MinMax_Output_Name",
+			"Description": "Output Of TSV dataset",
+			"Tag": "MinMax_Output_Tag",
+			"Tables": [
+				{
+					"TableRef": "#ANY_TABLE#",
+					"TableAlias": "#ANY_TABLE#",
+					"SortOrder": 10,
+					"Columns": [
+						{
+							"OutputColumnId": "MinMax_Phys",
+							"IsVisible": "Y",
+							"IsInsertable": "Y",
+							"IsEditable": "Y",
+							"IsRequired": "Y",
+							"ColumnRef": "COL0",
+							"SortOrder": 10
+						},
+						{
+							"OutputColumnId": "Min_Phys",
+							"IsVisible": "Y",
+							"IsInsertable": "Y",
+							"IsEditable": "Y",
+							"IsRequired": "Y",
+							"ColumnRef": "COL1",
+							"SortOrder": 20
+						},
+						{
+							"OutputColumnId": "Max_Phys",
+							"IsVisible": "Y",
+							"IsInsertable": "Y",
+							"IsEditable": "Y",
+							"IsRequired": "Y",
+							"ColumnRef": "COL2",
+							"SortOrder": 30
+						},
+						{
+							"OutputColumnId": "Outcome_Phys",
+							"IsVisible": "Y",
+							"IsInsertable": "Y",
+							"IsEditable": "Y",
+							"IsRequired": "Y",
+							"ColumnRef": "COL3",
+							"SortOrder": 40
+						}
+					]
+				}
+			]
+		}
+	],
+	"Queries": [
+		{
+			"QueryId": "MinMax_Query",
+			"SchemaRef": "#ANY_TABLE#",
+			"Name": "Stage TSV Data",
+			"IsDefaultedNull": "N",
+			"UseOutputTags": "N",
+			"Tag": "MinMax_Query_Tag",
+			"Outputs": [
+				{
+					"OutputRef": "MinMax_Output",
+					"SortOrder": 10
+				}
+			]
+		}
+	],
+	"Workflows": [
+		{
+			"WorkflowId": "MinMax_Workflow",
+			"TargetRef": "SPARK",
+			"Tag": "DATA",
+			"Name": "MinMax Dataset",
+			"Description": "Bananaman",
+			"SortOrder": 0,
+			"IsRestartable": "Y",
+			"MaxRetryCount": 10,
+			"Properties": [
+				{
+					"PropertyRef": "WF-UPLOAD-TYPE",
+					"PropertyValue": "SINGLE"
+				}
+			],
+			"Blocks": [
+				{
+					"BlockId": "MinMax_Block",
+					"Name": "MinMax_Block_Name",
+					"Description": "MinMax Block",
+					"SortOrder": 10,
+					"Steps": [
+						{
+							"StepRef": "MinMax_Workflow_Step",
+							"SortOrder": 10
+						}
+					]
+				}
+			],
+			"Steps": [
+				{
+					"StepId": "MinMax_Workflow_Step",
+					"Name": "MinMax_Workflow_Step_Name",
+					"Description": "MinMax Workflow Step",
+					"QueryRef": "MinMax_Query",
+					"Action": "BULKINSERT",
+					"ExecutionEngine": "FDM3CAP",
+					"SortOrder": 20,
+					"StepTargets": {
+						"TargetSchemaRef": "MinMax_Schema",
+						"TargetTableRef": "MinMax_Entity"
+					}
+				}
+			],
+			"Variables": [
+				{
+					"VariableId": "#COMMENT#",
+					"Name": "COMMENT",
+					"DataType": "S",
+					"DefaultValue": "MIN MAX READY DATASET",
+					"SortOrder": 30
+				}
+			]
+		}
+	]
+}

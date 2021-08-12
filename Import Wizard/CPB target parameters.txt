@@ -1,0 +1,2 @@
+jdbc:sqlserver://10.5.3.56:1433;databaseName=CBP
+test/Finsoft1

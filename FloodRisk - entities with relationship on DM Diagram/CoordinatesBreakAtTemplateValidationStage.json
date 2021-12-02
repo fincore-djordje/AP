@@ -1,0 +1,84 @@
+{
+    "Schemas": [
+        {
+            "SchemaId": "UK_Environment_Agency",
+            "TargetRef": "SPARK",
+            "Name": "UK_Environment_Agency",
+            "RootTag": "",
+            "ObjectTag": "RECORD",
+            "Owner": "n/a",
+            "Prefix": "n/a",
+            "Suffix": "n/a",
+            "IsLogical": "N"
+        }
+    ],
+
+    "Entities": [
+        {
+            "EntityId": "Coordinates",
+            "Name": "Coordinates",
+            "Tag": "UKEA",
+            "FormalName": "Coordinates",
+            "IdColumnRef": "n/a",
+            "IsRepeatable": "N",
+            "IsHierarchical": "N",
+            "SortOrder": 1,
+            "Columns": [
+                {
+                    "ColumnId": "FeatureRef",
+                    "PhysicalName": "FeatureRef",
+                    "Name": "FeatureRef",
+                    "Tag": "UKEA",
+                    "Description": "FeatureRef",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "^([0-9]){1,}$",
+                    "Datatype": "N",
+                    "SortOrder": 10
+                },
+                {
+                    "ColumnId": "X(Easting)",
+                    "PhysicalName": "X(Easting)",
+                    "Name": "X(Easting)",
+                    "Tag": "UKEA",
+                    "Description": "Easting",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "^([0-9]){1,}$",
+                    "Datatype": "N",
+                    "SortOrder": 20
+                },
+                                {
+                    "ColumnId": "Y-Northing",
+                    "PhysicalName": "Y-Northing",
+                    "Name": "Y-Northing",
+                    "Tag": "UKEA",
+                    "Description": "Northing",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "?",
+                    "Datatype": "N",
+                    "SortOrder": 30
+                }
+                
+            ],
+                     "Rules": [
+            {
+               "RuleId": "CMFeaturehasCoordinates",
+               "ConstraintType": "hasCoordinates",
+               "ParentEntityRef": "ClusterMapFeature",
+               "SortOrder": 10,
+                 "Columns": [
+                  {
+                    "ColumnRef": "FeatureRef",
+                    "ParentColumnRef": "OBJECTID",
+                     "SortOrder": 10
+                  }]
+    }
+]
+}
+]
+}

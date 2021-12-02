@@ -1,0 +1,102 @@
+{
+    "Schemas": [
+        {
+            "SchemaId": "UK_Environment_Agency",
+            "TargetRef": "SPARK",
+            "Name": "UK_Environment_Agency",
+            "RootTag": "",
+            "ObjectTag": "RECORD",
+            "Owner": "n/a",
+            "Prefix": "n/a",
+            "Suffix": "n/a",
+            "IsLogical": "N"
+        }
+    ],
+    "Entities": [
+        {
+            "EntityId": "CommunitiesAtRiskByLLFA",
+            "Name": "CommunitiesAtRiskByLLFA",
+            "Tag": "UKEA",
+            "FormalName": "CommunitiesAtRiskByLLFA",
+            "IdColumnRef": "n/a",
+            "IsRepeatable": "N",
+            "IsHierarchical": "N",
+            "SortOrder": 1,            
+            "Columns": [
+                {
+                    "ColumnId": "OBJECTID",
+                    "PhysicalName": "OBJECTID",
+                    "Name": "OBJECTID",
+                    "Tag": "UKEA",
+                    "Description": "OBJECTID",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "?",
+                    "Datatype": "S",
+                    "SortOrder": 10
+                },
+                {
+                    "ColumnId": "ons_buasd1",
+                    "PhysicalName": "ons_buasd1",
+                    "Name": "ons_buasd1",
+                    "Tag": "UKEA",
+                    "Description": "ons_buasd1",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "?",
+                    "Datatype": "S",
+                    "SortOrder": 20
+                },
+                {
+                    "ColumnId": "total_prop",
+                    "PhysicalName": "total_prop",
+                    "Name": "total_prop",
+                    "Tag": "UKEA",
+                    "Description": "total_prop",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "?",
+                    "Datatype": "S",
+                    "SortOrder": 30
+                },
+                                {
+                    "ColumnId": "shape_Length",
+                    "PhysicalName": "shape_Length",
+                    "Name": "shape_Length",
+                    "Tag": "UKEA",
+                    "Description": "shape_Length",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "?",
+                    "Datatype": "S",
+                    "SortOrder": 40
+                },
+                {
+                    "ColumnId": "shape_Area",
+                    "PhysicalName": "shape_Area",
+                    "Name": "shape_Area",
+                    "Tag": "UKEA",
+                    "Description": "shape_Area",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "?",
+                    "Datatype": "S",
+                    "SortOrder": 50
+                }
+            ],
+         "Rules": [
+            {
+               "RuleId": "EA_Publisher",
+               "ConstraintType": "prov:wasGeneratedBy",
+               "ParentEntityRef": "EnvironmentalAgency",
+               "SortOrder": 10
+            }
+            ]
+    }
+]
+}

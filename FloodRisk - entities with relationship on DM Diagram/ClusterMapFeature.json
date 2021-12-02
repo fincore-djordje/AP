@@ -1,0 +1,167 @@
+{
+    "Schemas": [
+        {
+            "SchemaId": "UK_Environment_Agency",
+            "TargetRef": "SPARK",
+            "Name": "UK_Environment_Agency",
+            "RootTag": "",
+            "ObjectTag": "RECORD",
+            "Owner": "n/a",
+            "Prefix": "n/a",
+            "Suffix": "n/a",
+            "IsLogical": "N"
+        }
+    ],
+    "Entities": [
+        {
+            "EntityId": "ClusterMapFeature",
+            "Name": "ClusterMapFeature",
+            "Tag": "UKEA",
+            "FormalName": "ClusterMapFeature",
+            "IdColumnRef": "n/a",
+            "IsRepeatable": "N",
+            "IsHierarchical": "N",
+            "SortOrder": 1,
+            "Columns": [
+                                {
+                    "ColumnId": "FeatureType",
+                    "PhysicalName": "FeatureType",
+                    "Name": "FeatureType",
+                    "Tag": "UKEA",
+                    "Description": "FeatureType",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "^([a-zA-Z]){1,}$",
+                    "Datatype": "S",
+                    "SortOrder": 10
+                },
+                {
+                    "ColumnId": "OBJECTID",
+                    "PhysicalName": "OBJECTID",
+                    "Name": "OBJECTID",
+                    "Tag": "UKEA",
+                    "Description": "OBJECTID",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "^([0-9]){1,}$",
+                    "Datatype": "N",
+                    "SortOrder": 20
+                },
+                                {
+                    "ColumnId": "rank_nump",
+                    "PhysicalName": "rank_nump",
+                    "Name": "rank_nump",
+                    "Tag": "UKEA",
+                    "Description": "rank_nump",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "^([0-9]){1,}$",
+                    "Datatype": "N",
+                    "SortOrder": 30
+                },
+                                {
+                    "ColumnId": "name",
+                    "PhysicalName": "name",
+                    "Name": "name",
+                    "Tag": "UKEA",
+                    "Description": "name",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "^([a-zA-Z]){1,}$",
+                    "Datatype": "S",
+                    "SortOrder": 40
+                },
+                {
+                    "ColumnId": "numresp",
+                    "PhysicalName": "numresp",
+                    "Name": "numresp",
+                    "Tag": "UKEA",
+                    "Description": "numresp",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "^([0-9]){1,}$",
+                    "Datatype": "N",
+                    "SortOrder": 50
+                },
+                                {
+                    "ColumnId": "numpeople",
+                    "PhysicalName": "numpeople",
+                    "Name": "numpeople",
+                    "Tag": "UKEA",
+                    "Description": "numpeople",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "/^[0-9]{1,10}\\{0,1}[0-9]{1,8}$",
+                    "Datatype": "N",
+                    "SortOrder": 60
+                },
+                {
+                    "ColumnId": "numkeys",
+                    "PhysicalName": "numkeys",
+                    "Name": "numkeys",
+                    "Tag": "UKEA",
+                    "Description": "numkeys",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "^([0-9]){1,}$",
+                    "Datatype": "N",
+                    "SortOrder": 70
+                },
+                {
+                    "ColumnId": "numnonresp",
+                    "PhysicalName": "numnonresp",
+                    "Name": "numnonresp",
+                    "Tag": "UKEA",
+                    "Description": "numnonresp",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "^([0-9]){1,}$",
+                    "Datatype": "N",
+                    "SortOrder": 80
+                },
+                {
+                    "ColumnId": "shape_Length",
+                    "PhysicalName": "shape_Length",
+                    "Name": "shape_Length",
+                    "Tag": "UKEA",
+                    "Description": "shape_Length",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "^([0-9]){1,}$",
+                    "Datatype": "N",
+                    "SortOrder": 90
+                },
+                                {
+                    "ColumnId": "shape_Area",
+                    "PhysicalName": "shape_Area",
+                    "Name": "shape_Area",
+                    "Tag": "UKEA",
+                    "Description": "shape_Area",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "^([0-9]){1,}$",
+                    "Datatype": "N",
+                    "SortOrder": 100
+                }
+            ],
+            "Rules": [
+            {
+               "RuleId": "skos:narrower",
+               "ConstraintType": "skos:narrower",
+               "ParentEntityRef": "FloodRiskAreas",
+               "SortOrder": 10
+               }
+               ]
+    }
+]
+}

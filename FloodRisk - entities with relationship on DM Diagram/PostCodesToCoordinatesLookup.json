@@ -1,0 +1,89 @@
+{
+    "Schemas": [
+        {
+            "SchemaId": "UK_Environment_Agency",
+            "TargetRef": "SPARK",
+            "Name": "UK_Environment_Agency",
+            "RootTag": "",
+            "ObjectTag": "RECORD",
+            "Owner": "n/a",
+            "Prefix": "n/a",
+            "Suffix": "n/a",
+            "IsLogical": "N"
+        }
+    ],
+
+    "Entities": [
+        {
+            "EntityId": "Postcodes",
+            "Name": "PostCodes",
+            "Tag": "UKEA",
+            "FormalName": "PostCodes",
+            "IdColumnRef": "n/a",
+            "IsRepeatable": "N",
+            "IsHierarchical": "N",
+            "SortOrder": 1,
+            "Columns": [
+                            {
+                    "ColumnId": "PostCodeArea",
+                    "PhysicalName": "PostCodeArea",
+                    "Name": "PostCodeArea",
+                    "Tag": "UKEA",
+                    "Description": "PostCodeArea",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "?",
+                    "Datatype": "S",
+                    "SortOrder": 10
+                },
+                {
+                    "ColumnId": "PostCode",
+                    "PhysicalName": "PostCode",
+                    "Name": "PostCode",
+                    "Tag": "UKEA",
+                    "Description": "PostCode",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "?",
+                    "Datatype": "S",
+                    "SortOrder": 20
+                },
+                {
+                    "ColumnId": "X",
+                    "PhysicalName": "X",
+                    "Name": "X",
+                    "Tag": "UKEA",
+                    "Description": "Easting",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "?",
+                    "Datatype": "S",
+                    "SortOrder": 30
+                },
+                                {
+                    "ColumnId": "Y",
+                    "PhysicalName": "Y",
+                    "Name": "Y",
+                    "Tag": "UKEA",
+                    "Description": "Northing",
+                    "IsRequired": "Y",
+                    "IsIndexed": "Y",
+                    "IsCalculated": "N",
+                    "Format": "?",
+                    "Datatype": "S",
+                    "SortOrder": 40
+                }
+                
+            ],
+                     "Rules": [
+            {
+               "RuleId": "hasCoordinates",
+               "ConstraintType": "hasPostCode",
+               "ParentEntityRef": "Coordinates",
+               "SortOrder": 10
+               }               ]
+    }
+]}

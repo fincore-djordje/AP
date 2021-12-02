@@ -428,7 +428,30 @@
 			"Properties": [
 				{
 					"PropertyRef": "WF-UPLOAD-TYPE",
-					"PropertyValue": "SINGLE"
+					"PropertyValue": "SINGLE",
+					"SortOrder": 10
+				},
+				{
+					"PropertyRef": "Calendar.Schedule",
+					"PropertyValue": "FREQ=DAILY",
+					"SortOrder": 20
+				},
+				{
+					"PropertyRef": "Calendar.CalendarAdjustIndex",
+					"PropertyValue": "0",
+					"SortOrder": 30
+				},{
+					"PropertyRef": "Calendar.CalendarAdjustIndexType",
+					"PropertyValue": "D",
+					"SortOrder": 40
+				},{
+					"PropertyRef": "Calendar.SourceDateAdjustIndex",
+					"PropertyValue": "0",
+					"SortOrder": 50
+				},{
+					"PropertyRef": "Calendar.SourceDateAdjustIndexType",
+					"PropertyValue": "D",
+					"SortOrder": 60
 				}
 			],
 			"Blocks": [

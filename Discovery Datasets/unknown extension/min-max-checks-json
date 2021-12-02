@@ -1,0 +1,326 @@
+[
+    {
+      "minMax": 9,
+      "min": 4,
+      "max": 74,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 10,
+      "min": 4,
+      "max": 74,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 11,
+      "min": 4,
+      "max": 74,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 49,
+      "min": 4,
+      "max": 74,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 50,
+      "min": 4,
+      "max": 74,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 51,
+      "min": 4,
+      "max": 74,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 9,
+      "min": 5,
+      "max": 74,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 10,
+      "min": 5,
+      "max": 74,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 11,
+      "min": 5,
+      "max": 74,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 49,
+      "min": 5,
+      "max": 74,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 50,
+      "min": 5,
+      "max": 74,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 51,
+      "min": 5,
+      "max": 74,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 9,
+      "min": 6,
+      "max": 74,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 10,
+      "min": 6,
+      "max": 74,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 11,
+      "min": 6,
+      "max": 74,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 49,
+      "min": 6,
+      "max": 74,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 50,
+      "min": 6,
+      "max": 74,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 51,
+      "min": 6,
+      "max": 74,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 9,
+      "min": 4,
+      "max": 75,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 10,
+      "min": 4,
+      "max": 75,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 11,
+      "min": 4,
+      "max": 75,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 49,
+      "min": 4,
+      "max": 75,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 50,
+      "min": 4,
+      "max": 75,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 51,
+      "min": 4,
+      "max": 75,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 9,
+      "min": 5,
+      "max": 75,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 10,
+      "min": 5,
+      "max": 75,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 11,
+      "min": 5,
+      "max": 75,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 49,
+      "min": 5,
+      "max": 75,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 50,
+      "min": 5,
+      "max": 75,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 51,
+      "min": 5,
+      "max": 75,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 9,
+      "min": 6,
+      "max": 75,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 10,
+      "min": 6,
+      "max": 75,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 11,
+      "min": 6,
+      "max": 75,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 49,
+      "min": 6,
+      "max": 75,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 50,
+      "min": 6,
+      "max": 75,
+      "outcome": "pass"
+    },
+    {
+      "minMax": 51,
+      "min": 6,
+      "max": 75,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 9,
+      "min": 4,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 10,
+      "min": 4,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 11,
+      "min": 4,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 49,
+      "min": 4,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 50,
+      "min": 4,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 51,
+      "min": 4,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 9,
+      "min": 5,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 10,
+      "min": 5,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 11,
+      "min": 5,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 49,
+      "min": 5,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 50,
+      "min": 5,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 51,
+      "min": 5,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 9,
+      "min": 6,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 10,
+      "min": 6,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 11,
+      "min": 6,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 49,
+      "min": 6,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 50,
+      "min": 6,
+      "max": 76,
+      "outcome": "fail"
+    },
+    {
+      "minMax": 51,
+      "min": 6,
+      "max": 76,
+      "outcome": "fail"
+    }
+   ]

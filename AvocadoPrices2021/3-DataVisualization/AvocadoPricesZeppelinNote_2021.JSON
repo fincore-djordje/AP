@@ -102,7 +102,7 @@
       "$$hashKey": "object:48951"
     },
     {
-      "text": "%spark\r\n\r\nval AP = spark.read.load(\"/qh/qhdata/AP_ENTITY_2021\")\r\nAP.createOrReplaceTempView(\"AVOCADO_PRICES\")\r\nAP.printSchema()",
+      "text": "%spark\r\n\r\nval conf = sc.hadoopConfiguration\r\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\r\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/AP_ENTITY_2021\"))\r\n\r\nif(exists == false)\r\n{\r\n    val AP = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/AP_ENTITY_2021\")\r\n    AP.createOrReplaceTempView(\"AVOCADO_PRICES\")\r\n    AP.printSchema()\r\n}\r\nelse\r\n{\r\n    val AP = spark.read.load(\"/qh/qhdata/AP_ENTITY_2021\")\r\n    AP.createOrReplaceTempView(\"AVOCADO_PRICES\")\r\n    AP.printSchema()\r\n}",
       "user": "admin",
       "dateUpdated": "2021-02-23T12:12:39+0000",
       "config": {

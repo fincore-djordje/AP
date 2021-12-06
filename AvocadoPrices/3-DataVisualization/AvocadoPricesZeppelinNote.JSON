@@ -38,7 +38,7 @@
 			"runtimeInfos": {}
 		},
 		{
-			"text": "%spark\n\nval AP = spark.read.load(\"/qh/qhdata/AP_ENTITY_FORMAL_NAME\")\nAP.createOrReplaceTempView(\"AVOCADO_PRICES\")\nAP.printSchema()",
+			"text": "%spark\r\n\r\nval conf = sc.hadoopConfiguration\r\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\r\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/AP_ENTITY_FORMAL_NAME\"))\r\n\r\nif(exists == false)\r\n{\r\n    val AP = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/AP_ENTITY_FORMAL_NAME\")\r\n    AP.createOrReplaceTempView(\"AVOCADO_PRICES\")\r\n    AP.printSchema()\r\n}\r\nelse\r\n{\r\n    val AP = spark.read.load(\"/qh/qhdata/AP_ENTITY_FORMAL_NAME\")\r\n    AP.createOrReplaceTempView(\"AVOCADO_PRICES\")\r\n    AP.printSchema()\r\n}",
 			"user": "anonymous",
 			"config": {
 				"editorSetting": {

@@ -1,0 +1,420 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%sh\r\n\r\n# ls /qh/qhdata/",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T14:40:18+0000",
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1639060440498_788934089",
+      "id": "paragraph_1614078749630_426284237",
+      "dateCreated": "2021-12-09T14:34:00+0000",
+      "dateStarted": "2021-12-09T14:39:38+0000",
+      "dateFinished": "2021-12-09T14:39:38+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:3731"
+    },
+    {
+      "text": "%spark\r\n\r\nval conf = sc.hadoopConfiguration\r\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\r\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/AP_ENTITY_2021_T1_CND\"))\r\n\r\nif(exists == false)\r\n{\r\n    val AP2021_CND = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/AP_ENTITY_2021_T1_CND\")\r\n    AP2021_CND.createOrReplaceTempView(\"AVOCADO_PRICES_2021_CND\")\r\n    AP2021_CND.printSchema()\r\n}\r\nelse\r\n{\r\n    val AP2021_CND = spark.read.load(\"/qh/qhdata/AP_ENTITY_2021_T1_CND\")\r\n    AP2021_CND.createOrReplaceTempView(\"AVOCADO_PRICES_2021_CND\")\r\n    AP2021_CND.printSchema()\r\n}",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T14:40:18+0000",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 4,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=94",
+              "$$hashKey": "object:4336"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1639060440498_153783446",
+      "id": "paragraph_1614078544303_274551933",
+      "dateCreated": "2021-12-09T14:34:00+0000",
+      "dateStarted": "2021-12-09T14:39:38+0000",
+      "dateFinished": "2021-12-09T14:39:39+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:3732"
+    },
+    {
+      "text": "%spark\r\n\r\nval conf = sc.hadoopConfiguration\r\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\r\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/AP_ENTITY_2021_T1_ERR\"))\r\n\r\nif(exists == false)\r\n{\r\n    val AP2021_ERR = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/AP_ENTITY_2021_T1_ERR\")\r\n    AP2021_ERR.createOrReplaceTempView(\"AVOCADO_PRICES_2021_ERR\")\r\n    AP2021_ERR.printSchema()\r\n}\r\nelse\r\n{\r\n    val AP2021_ERR = spark.read.load(\"/qh/qhdata/AP_ENTITY_2021_T1_ERR\")\r\n    AP2021_ERR.createOrReplaceTempView(\"AVOCADO_PRICES_2021_ERR\")\r\n    AP2021_ERR.printSchema()\r\n}",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T14:40:18+0000",
+      "config": {
+        "colWidth": 4,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=95",
+              "$$hashKey": "object:4341"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1639060644637_640420634",
+      "id": "paragraph_1639060644637_640420634",
+      "dateCreated": "2021-12-09T14:37:24+0000",
+      "dateStarted": "2021-12-09T14:39:39+0000",
+      "dateFinished": "2021-12-09T14:39:40+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:3733"
+    },
+    {
+      "text": "%spark\r\n\r\nval conf = sc.hadoopConfiguration\r\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\r\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/AP_ENTITY_2021_T1_STG\"))\r\n\r\nif(exists == false)\r\n{\r\n    val AP2021_STG = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/AP_ENTITY_2021_T1_STG\")\r\n    AP2021_STG.createOrReplaceTempView(\"AVOCADO_PRICES_2021_STG\")\r\n    AP2021_STG.printSchema()\r\n}\r\nelse\r\n{\r\n    val AP2021_STG = spark.read.load(\"/qh/qhdata/AP_ENTITY_2021_T1_STG\")\r\n    AP2021_STG.createOrReplaceTempView(\"AVOCADO_PRICES_2021_STG\")\r\n    AP2021_STG.printSchema()\r\n}",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T14:40:18+0000",
+      "config": {
+        "colWidth": 4,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=96",
+              "$$hashKey": "object:4346"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1639060659154_924059784",
+      "id": "paragraph_1639060659154_924059784",
+      "dateCreated": "2021-12-09T14:37:39+0000",
+      "dateStarted": "2021-12-09T14:39:40+0000",
+      "dateFinished": "2021-12-09T14:39:40+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:3734"
+    },
+    {
+      "text": "%spark.sql\n--SELECT * FROM AVOCADO_PRICES_2021_CND\n\nSELECT count(*) FROM AVOCADO_PRICES_2021_CND",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T14:40:18+0000",
+      "config": {
+        "colWidth": 4,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=97",
+              "$$hashKey": "object:4351"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1639060707644_2050585742",
+      "id": "paragraph_1639060707644_2050585742",
+      "dateCreated": "2021-12-09T14:38:27+0000",
+      "dateStarted": "2021-12-09T14:39:40+0000",
+      "dateFinished": "2021-12-09T14:39:41+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:3735"
+    },
+    {
+      "text": "%spark.sql\n--SELECT * FROM AVOCADO_PRICES_2021_ERR\n\nSELECT count(*) FROM AVOCADO_PRICES_2021_ERR",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T14:40:18+0000",
+      "config": {
+        "colWidth": 4,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=98",
+              "$$hashKey": "object:4356"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1639060722473_1984905540",
+      "id": "paragraph_1639060722473_1984905540",
+      "dateCreated": "2021-12-09T14:38:42+0000",
+      "dateStarted": "2021-12-09T14:39:41+0000",
+      "dateFinished": "2021-12-09T14:39:41+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:3736"
+    },
+    {
+      "text": "%spark.sql\n--SELECT * FROM AVOCADO_PRICES_2021_STG\n\nSELECT count(*) FROM AVOCADO_PRICES_2021_STG",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T14:40:18+0000",
+      "config": {
+        "colWidth": 4,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=99",
+              "$$hashKey": "object:4361"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1639060728569_1831619457",
+      "id": "paragraph_1639060728569_1831619457",
+      "dateCreated": "2021-12-09T14:38:48+0000",
+      "dateStarted": "2021-12-09T14:39:41+0000",
+      "dateFinished": "2021-12-09T14:39:41+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:3737"
+    }
+  ],
+  "name": "Avocado Prices 2021 T1",
+  "id": "2GRNXXC3F",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0-preview2",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": true,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {
+    "isRunning": false
+  },
+  "path": "/Avocado Prices 2021 T1"
+}

@@ -1,0 +1,217 @@
+{
+    "Schemas": [
+		{
+			"SchemaId": "BANK_FULL_METADATA",
+			"TargetRef": "SPARK",
+			"Name": "BANK_FULL_METADATA",
+			"RootTag": "",
+			"ObjectTag": "RECORD",
+			"Owner": "n/a",
+			"Prefix": "n/a",
+			"Suffix": "n/a",
+			"IsLogical": "N"
+		}
+	],
+	"Entities": [
+		{
+			"EntityId": "BANK_FULL_ENTITY",
+			"Name": "BANK_FULL_ENTITY",
+			"Tag": "BANK_FULL_ENTITY",
+			"Description": "Description Bank Full",
+			"FormalName": "BANK_FULL_ENTITY",
+			"IdColumnRef": "n/a",
+			"IsRepeatable": "N",
+			"IsHierarchical": "N",
+			"SortOrder": 1,
+			"Columns": [
+				{
+					"ColumnId": "AGE",
+					"PhysicalName": "AGE",
+					"Description": "Decription AGE",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 10
+				},
+				{
+					"ColumnId": "JOB",
+					"PhysicalName": "JOB",
+					"Description": "Decription JOB",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 20
+				},
+				{
+					"ColumnId": "MARITAL_STATUS",
+					"PhysicalName": "MARITAL_STATUS",
+					"Description": "Decription MARITAL STATUS",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 30
+				},
+				{
+					"ColumnId": "EDUCATION",
+					"PhysicalName": "EDUCATION",
+					"Description": "Decription EDUCATION",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 40
+				},
+				{
+					"ColumnId": "DEFAULT",
+					"PhysicalName": "DEFAULT",
+					"Description": "Decription DEFAULT",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 50
+				},
+				{
+					"ColumnId": "BALANCE",
+					"PhysicalName": "BALANCE",
+					"Description": "Decription BALANCE",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 60
+				},
+				{
+					"ColumnId": "HOUSING",
+					"PhysicalName": "HOUSING",
+					"Description": "Decription HOUSING",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 70
+				},
+				{
+					"ColumnId": "LOAN",
+					"PhysicalName": "LOAN",
+					"Description": "Decription LOAN",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 80
+				},
+				{
+					"ColumnId": "CONTACT",
+					"PhysicalName": "CONTACT",
+					"Description": "Decription CONTACT",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 90
+				},
+				{
+					"ColumnId": "DAY",
+					"PhysicalName": "DAY",
+					"Description": "Decription DAY",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 100
+				},
+				{
+					"ColumnId": "MONTH",
+					"PhysicalName": "MONTH",
+					"Description": "Decription MONTH",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 110
+				},
+				{
+					"ColumnId": "DURATION",
+					"PhysicalName": "DURATION",
+					"Description": "Decription DURATION",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 120
+				},
+				{
+					"ColumnId": "CAMPAIGN",
+					"PhysicalName": "CAMPAIGN",
+					"Description": "Decription CAMPAIGN",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 130
+				},
+				{
+					"ColumnId": "PDAYS",
+					"PhysicalName": "PDAYS",
+					"Description": "Decription PDAYS",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 140
+				},
+				{
+					"ColumnId": "PREVIOUS",
+					"PhysicalName": "PREVIOUS",
+					"Description": "Decription PREVIOUS",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "N",
+					"SortOrder": 150
+				},
+				{
+					"ColumnId": "POUTCOME",
+					"PhysicalName": "POUTCOME",
+					"Description": "Decription POUTCOME",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 160
+				},
+				{
+					"ColumnId": "YoN",
+					"PhysicalName": "YoN",
+					"Description": "Decription YoN",
+					"IsRequired": "Y",
+					"IsIndexed": "N",
+					"IsCalculated": "N",
+					"Format": "?",
+					"Datatype": "S",
+					"SortOrder": 170
+				}
+			]
+		}
+	]
+}

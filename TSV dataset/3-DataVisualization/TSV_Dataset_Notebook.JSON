@@ -1,9 +1,9 @@
 ﻿{
   "paragraphs": [
     {
-      "text": "%sh\r\n\r\nls /qh/qhdata/ -ls",
-      "user": "qhadmin",
-      "dateUpdated": "2021-07-23T09:24:38+0000",
+      "text": "%sh\r\n\r\n# ls /qh/qhdata/ -ls",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T10:59:45+0000",
       "config": {
         "editorSetting": {
           "language": "sh",
@@ -21,31 +21,22 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "total 3280\n   4 -rw-r--r--. 1 root root     236 Jul 23 08:08 459ae74c-68c4-4739-8f7f-cf70e4f944fbhttps###raw.githubusercontent.com#fincore-djordje#importware#master#Discovery%20All%20File%20Types#Random.json?token=ASZFNEXCJRVXPZEXMZLBJE3A7J4S6\n   4 drwxr-xr-x. 2 root root    4096 Jul 23 07:15 AP_ENTITY_2021\n3160 -rw-r--r--. 1 root root 3235266 Jul 23 07:14 AP_WORKFLOW_101_1ca71a4d-45db-472f-b5b5-2cfda1aad008.csv\n   4 -rw-r--r--. 1 root root     240 Jul 23 08:09 Random.6894f428-3605-4343-a8ec-91d4632cb93d.json\n   4 -rw-r--r--. 1 root root     240 Jul 23 08:09 Random.6f81657b-4707-4c91-9337-31a1823fbb15.json\n   4 -rw-r--r--. 1 root root     240 Jul 23 08:08 Random.8f9a4e2f-86f1-4254-9498-7c2f5fbf7b53.json\n   4 drwxr-xr-x. 2 root root    4096 Jul 23 09:23 TSV_ENTITY_FORMAL_NAME\n   4 -rw-r--r--. 1 root root     747 Jul 23 09:23 TSV_WORKFLOW_308_8fc7917c-b250-431e-8d3d-ebeb4cb8dd1d.csv\n   4 drwxr-xr-x. 2 root root    4096 Jul 23 07:14 UPLOAD_101\n   0 drwxr-xr-x. 2 root root       6 Jul 23 08:08 UPLOAD_222.json\n   0 drwxr-xr-x. 2 root root       6 Jul 23 08:09 UPLOAD_223.json\n   0 drwxr-xr-x. 2 root root       6 Jul 23 08:09 UPLOAD_224.json\n   0 drwxr-xr-x. 2 root root       6 Jul 23 08:14 UPLOAD_262.json\n   4 drwxr-xr-x. 2 root root    4096 Jul 23 09:00 UPLOAD_301\n   4 drwxr-xr-x. 2 root root    4096 Jul 23 09:23 UPLOAD_308\n   4 drwxr-xr-x. 2 root root    4096 Jul 23 07:45 WF_COLUMNPROPERTY_DISCOVERY_122\n   4 -rw-r--r--. 1 root root     273 Jul 23 07:45 WF_COLUMNPROPERTY_DISCOVERY_122_04b0592f-1f69-4df7-abd1-24e7f89b4aac.csv\n   4 drwxr-xr-x. 2 root root    4096 Jul 23 07:47 WF_COLUMNPROPERTY_DISCOVERY_141\n   4 -rw-r--r--. 1 root root     693 Jul 23 07:47 WF_COLUMNPROPERTY_DISCOVERY_141_608706c9-849f-47ae-8793-5da5675b4832.csv\n   4 drwxr-xr-x. 2 root root    4096 Jul 23 07:58 WF_COLUMNPROPERTY_DISCOVERY_183\n   4 -rw-r--r--. 1 root root    1938 Jul 23 07:58 WF_COLUMNPROPERTY_DISCOVERY_183_c18bf5b1-8fae-44c3-8825-fd933f98c9ea.csv\n   0 drwxr-xr-x. 2 root root       6 Jul 23 08:08 WF_COLUMNPROPERTY_DISCOVERY_221.json\n   4 drwxr-xr-x. 2 root root    4096 Jul 23 08:12 WF_COLUMNPROPERTY_DISCOVERY_241\n   4 -rw-r--r--. 1 root root     273 Jul 23 08:12 WF_COLUMNPROPERTY_DISCOVERY_241_3dd48c30-0a94-4aba-83d2-d9c751fe51b8.csv\n  28 -rw-r--r--. 1 root root   26004 Jul 23 09:00 WF_COLUMNPROPERTY_DISCOVERY_301_e1a2b6a4-ccc3-4e1d-b2e9-0b00c9699511.csv\n   4 -rw-r--r--. 1 root root      27 Jul 23 07:45 a6334c0a-f92f-4279-85f4-32c6bfd0f00f.tmp\n   4 -rw-r--r--. 1 root root    2154 Jul 23 08:14 discovery_test.cf6004ec-0c90-4435-97bc-816161f2bc33.json\n  12 -rw-r--r--. 1 root root    9981 Jul 23 08:14 discovery_test.edc85943-4ee3-47d7-b9ad-2810b4c59529.xml\n"
-          }
-        ]
-      },
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1627032265701_76735521",
+      "jobName": "paragraph_1639047460361_922321687",
       "id": "paragraph_1614078749630_426284237",
-      "dateCreated": "2021-07-23T09:24:25+0000",
+      "dateCreated": "2021-12-09T10:57:40+0000",
+      "dateStarted": "2021-12-09T10:59:45+0000",
+      "dateFinished": "2021-12-09T10:59:46+0000",
       "status": "FINISHED",
       "focus": true,
-      "$$hashKey": "object:676",
-      "dateFinished": "2021-07-23T09:24:38+0000",
-      "dateStarted": "2021-07-23T09:24:38+0000"
+      "$$hashKey": "object:4206"
     },
     {
-      "text": "%spark\r\n\r\nval TSV_Dataset = spark.read.load(\"/qh/qhdata/TSV_ENTITY_FORMAL_NAME\")\r\nTSV_Dataset.createOrReplaceTempView(\"TSV_DATASET\")\r\nTSV_Dataset.printSchema()",
-      "user": "qhadmin",
-      "dateUpdated": "2021-07-23T09:27:16+0000",
+      "text": "%spark\r\n\r\nval conf = sc.hadoopConfiguration\r\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\r\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/TSV_ENTITY_FORMAL_NAME\"))\r\n\r\nif(exists == false)\r\n{\r\n    val TSV_Dataset = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/TSV_ENTITY_FORMAL_NAME\")\r\n    TSV_Dataset.createOrReplaceTempView(\"TSV_DATASET\")\r\n    TSV_Dataset.printSchema()\r\n}\r\nelse\r\n{\r\n    val TSV_Dataset = spark.read.load(\"/qh/qhdata/AP_ENTITY_2021\")\r\n    TSV_Dataset.createOrReplaceTempView(\"TSV_DATASET\")\r\n    TSV_Dataset.printSchema()\r\n}",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T10:59:46+0000",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -63,15 +54,6 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TEXT",
-            "data": "root\n |-- TSV_minMax_PHYS: string (nullable = true)\n |-- TSV_min_PHYS: string (nullable = true)\n |-- TSV_max_PHYS: string (nullable = true)\n |-- TSV_Outcome_PHYS: string (nullable = true)\n\n\u001b[1m\u001b[34mTSV_Dataset\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [TSV_minMax_PHYS: string, TSV_min_PHYS: string ... 2 more fields]\n"
-          }
-        ]
-      },
       "apps": [],
       "runtimeInfos": {
         "jobUrl": {
@@ -81,26 +63,26 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://10.93.39.192:4042/jobs/job?id=4",
-              "$$hashKey": "object:1682"
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=0",
+              "$$hashKey": "object:4334"
             }
           ],
           "interpreterSettingId": "spark"
         }
       },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1627032265701_902147304",
+      "jobName": "paragraph_1639047460362_308372669",
       "id": "paragraph_1614078544303_274551933",
-      "dateCreated": "2021-07-23T09:24:25+0000",
+      "dateCreated": "2021-12-09T10:57:40+0000",
+      "dateStarted": "2021-12-09T10:59:46+0000",
+      "dateFinished": "2021-12-09T11:00:11+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:677",
-      "dateFinished": "2021-07-23T09:27:17+0000",
-      "dateStarted": "2021-07-23T09:27:16+0000"
+      "$$hashKey": "object:4207"
     },
     {
       "text": "%spark.sql\n\nSELECT TSV_minMax_PHYS as MinMax, TSV_min_PHYS as Min, TSV_max_PHYS as Max, TSV_Outcome_PHYS as Outcome\nFROM TSV_DATASET",
-      "user": "qhadmin",
-      "dateUpdated": "2021-07-23T09:36:10+0000",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:00:11+0000",
       "config": {
         "editorSetting": {
           "language": "sql",
@@ -174,15 +156,6 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "TABLE",
-            "data": "MinMax\tMin\tMax\tOutcome\n9\t4\t74\tfail\n10\t4\t74\tfail\n11\t4\t74\tfail\n49\t4\t74\tfail\n50\t4\t74\tfail\n51\t4\t74\tfail\n9\t5\t74\tfail\n10\t5\t74\tpass\n11\t5\t74\tpass\n49\t5\t74\tpass\n50\t5\t74\tpass\n51\t5\t74\tfail\n9\t6\t74\tfail\n10\t6\t74\tpass\n11\t6\t74\tpass\n49\t6\t74\tpass\n50\t6\t74\tpass\n51\t6\t74\tfail\n9\t4\t75\tfail\n10\t4\t75\tfail\n11\t4\t75\tfail\n49\t4\t75\tfail\n50\t4\t75\tfail\n51\t4\t75\tfail\n9\t5\t75\tfail\n10\t5\t75\tpass\n11\t5\t75\tpass\n49\t5\t75\tpass\n50\t5\t75\tpass\n51\t5\t75\tfail\n9\t6\t75\tfail\n10\t6\t75\tpass\n11\t6\t75\tpass\n49\t6\t75\tpass\n50\t6\t75\tpass\n51\t6\t75\tfail\n9\t4\t76\tfail\n10\t4\t76\tfail\n11\t4\t76\tfail\n49\t4\t76\tfail\n50\t4\t76\tfail\n51\t4\t76\tfail\n9\t5\t76\tfail\n10\t5\t76\tfail\n11\t5\t76\tfail\n49\t5\t76\tfail\n50\t5\t76\tfail\n51\t5\t76\tfail\n9\t6\t76\tfail\n10\t6\t76\tfail\n11\t6\t76\tfail\n49\t6\t76\tfail\n50\t6\t76\tfail\n51\t6\t76\tfail\n"
-          }
-        ]
-      },
       "apps": [],
       "runtimeInfos": {
         "jobUrl": {
@@ -192,56 +165,25 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://10.93.39.192:4042/jobs/job?id=12",
-              "$$hashKey": "object:7976"
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=1",
+              "$$hashKey": "object:4382"
             }
           ],
           "interpreterSettingId": "spark"
         }
       },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1627032265701_1842436116",
+      "jobName": "paragraph_1639047460363_717369772",
       "id": "paragraph_1614082946751_1360998203",
-      "dateCreated": "2021-07-23T09:24:25+0000",
+      "dateCreated": "2021-12-09T10:57:40+0000",
+      "dateStarted": "2021-12-09T11:00:11+0000",
+      "dateFinished": "2021-12-09T11:00:17+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:678",
-      "dateFinished": "2021-07-23T09:35:24+0000",
-      "dateStarted": "2021-07-23T09:35:24+0000"
-    },
-    {
-      "text": "%spark.sql\n",
-      "user": "qhadmin",
-      "dateUpdated": "2021-07-23T09:26:56+0000",
-      "config": {
-        "colWidth": 12,
-        "fontSize": 9,
-        "enabled": true,
-        "results": {},
-        "editorSetting": {
-          "language": "scala",
-          "editOnDblClick": false,
-          "completionKey": "TAB",
-          "completionSupport": true
-        },
-        "editorMode": "ace/mode/scala"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "apps": [],
-      "runtimeInfos": {},
-      "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1627032416757_2005858929",
-      "id": "paragraph_1627032416757_2005858929",
-      "dateCreated": "2021-07-23T09:26:56+0000",
-      "status": "READY",
-      "focus": true,
-      "$$hashKey": "object:1533"
+      "$$hashKey": "object:4208"
     }
   ],
   "name": "TSV dataset",
-  "id": "2GAG4NYN1",
+  "id": "2GPATPNWE",
   "defaultInterpreterGroup": "spark",
   "version": "0.9.0-preview2",
   "noteParams": {},
@@ -252,6 +194,8 @@
     "looknfeel": "default",
     "personalizedMode": "false"
   },
-  "info": {},
+  "info": {
+    "isRunning": false
+  },
   "path": "/TSV dataset"
 }

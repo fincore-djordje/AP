@@ -1,9 +1,9 @@
 ﻿{
   "paragraphs": [
     {
-      "text": "\r\n%sh\r\nls /qh/qhdata/",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:04:09+0000",
+      "text": "\r\n%sh\r\n# ls /qh/qhdata/",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:49+0000",
       "config": {
         "editorSetting": {
           "language": "sh",
@@ -24,19 +24,23 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543409_1096236067",
+      "jobName": "paragraph_1639048775312_698856225",
       "id": "paragraph_1614078749630_426284237",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:09+0000",
-      "dateFinished": "2021-03-03T17:04:09+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:49+0000",
+      "dateFinished": "2021-12-09T11:25:49+0000",
       "status": "FINISHED",
       "focus": true,
-      "$$hashKey": "object:17931"
+      "$$hashKey": "object:4292",
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      }
     },
     {
       "text": "%sh\r\n\r\n# rm -r /qh/qhdata/*",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:04:09+0000",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:49+0000",
       "config": {
         "editorSetting": {
           "language": "sh",
@@ -57,18 +61,22 @@
       "apps": [],
       "runtimeInfos": {},
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_403532486",
+      "jobName": "paragraph_1639048775312_1244263071",
       "id": "paragraph_1614078770637_1457184876",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:09+0000",
-      "dateFinished": "2021-03-03T17:04:09+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:49+0000",
+      "dateFinished": "2021-12-09T11:25:49+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17932"
+      "$$hashKey": "object:4293",
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      }
     },
     {
-      "text": "%spark\r\n\r\nval AP_CND = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_CND\")\r\nAP_CND.createOrReplaceTempView(\"MIN_MAX_CND\")\r\nAP_CND.printSchema()",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:04:09+0000",
+      "text": "%spark\r\n\r\nval conf = sc.hadoopConfiguration\r\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\r\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/Min_Max_Checks_T2_CND\"))\r\n\r\nif(exists == false)\r\n{\r\n    val AP_CND = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/Min_Max_Checks_T2_CND\")\r\n    AP_CND.createOrReplaceTempView(\"MIN_MAX_CND\")\r\n    AP_CND.printSchema()\r\n}\r\nelse\r\n{\r\n    val AP_CND = spark.read.load(\"/qh/qhdata/Min_Max_Checks_T2_CND\")\r\n    AP_CND.createOrReplaceTempView(\"MIN_MAX_CND\")\r\n    AP_CND.printSchema()\r\n}",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:49+0000",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -87,20 +95,43 @@
         "forms": {}
       },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=14",
+              "$$hashKey": "object:5459"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_1990850192",
+      "jobName": "paragraph_1639048775312_1526316653",
       "id": "paragraph_1614078544303_274551933",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:09+0000",
-      "dateFinished": "2021-03-03T17:04:10+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:49+0000",
+      "dateFinished": "2021-12-09T11:25:50+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17933"
+      "$$hashKey": "object:4294",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- MinMax: decimal(18,8) (nullable = true)\n |-- Min: decimal(18,8) (nullable = true)\n |-- Max: decimal(18,8) (nullable = true)\n |-- ExpectedOutcome: string (nullable = true)\n |-- qH_IDENTIFIER: string (nullable = true)\n |-- qH_VERSION: string (nullable = true)\n |-- qH_TIMESTAMP: date (nullable = true)\n |-- qH_DATE: date (nullable = true)\n |-- qH_CATEGORY: string (nullable = true)\n |-- qH_PARTITION_1: string (nullable = true)\n |-- qH_PARTITION_2: string (nullable = true)\n |-- qH_PARTITION_3: string (nullable = true)\n |-- qH_PROCESS: integer (nullable = true)\n |-- qH_TIMESTAMP_INSERTED: timestamp (nullable = true)\n |-- qH_TIMESTAMP_LASTUPDATED: timestamp (nullable = true)\n |-- qH_BUSINESS_DATE: timestamp (nullable = true)\n |-- qH_DATASOURCE: string (nullable = true)\n |-- qH_SOURCEDATE: date (nullable = true)\n |-- qH_VALID_FROM: date (nullable = true)\n |-- qH_CORRECT_FROM: date (nullable = true)\n |-- qH_IS_VALID: integer (nullable = true)\n |-- qH_ROWID: string (nullable = true)\n\n\u001b[1m\u001b[34mconf\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.conf.Configuration\u001b[0m = Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml, hdfs-default.xml, hdfs-rbf-default.xml, hdfs-site.xml, hdfs-rbf-site.xml, __spark_hadoop_conf__.xml\n\u001b[1m\u001b[34mfs\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.fs.FileSystem\u001b[0m = org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem@4c8b39d6\n\u001b[1m\u001b[34mexists\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n"
+          }
+        ]
+      }
     },
     {
-      "text": "%spark\r\n\r\nval AP_ERR = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_ERR\")\r\nAP_ERR.createOrReplaceTempView(\"MIN_MAX_ERR\")\r\nAP_ERR.printSchema()",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:04:10+0000",
+      "text": "%spark\r\n\r\nval conf = sc.hadoopConfiguration\r\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\r\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/Min_Max_Checks_T2_ERR\"))\r\n\r\nif(exists == false)\r\n{\r\n    val AP_ERR = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/Min_Max_Checks_T2_ERR\")\r\n    AP_ERR.createOrReplaceTempView(\"MIN_MAX_ERR\")\r\n    AP_ERR.printSchema()\r\n}\r\nelse\r\n{\r\n    val AP_ERR = spark.read.load(\"/qh/qhdata/Min_Max_Checks_T2_ERR\")\r\n    AP_ERR.createOrReplaceTempView(\"MIN_MAX_ERR\")\r\n    AP_ERR.printSchema()\r\n}",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:50+0000",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -120,20 +151,43 @@
         "forms": {}
       },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=15",
+              "$$hashKey": "object:5495"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_1575359884",
+      "jobName": "paragraph_1639048775312_883115309",
       "id": "paragraph_1614705735205_623845052",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:10+0000",
-      "dateFinished": "2021-03-03T17:04:10+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:50+0000",
+      "dateFinished": "2021-12-09T11:25:51+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17934"
+      "$$hashKey": "object:4295",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- MinMax: string (nullable = true)\n |-- Min: string (nullable = true)\n |-- Max: string (nullable = true)\n |-- ExpectedOutcome: string (nullable = true)\n |-- qH_IDENTIFIER: string (nullable = true)\n |-- qH_VERSION: string (nullable = true)\n |-- qH_TIMESTAMP: string (nullable = true)\n |-- qH_DATE: string (nullable = true)\n |-- qH_CATEGORY: string (nullable = true)\n |-- qH_PARTITION_1: string (nullable = true)\n |-- qH_PARTITION_2: string (nullable = true)\n |-- qH_PARTITION_3: string (nullable = true)\n |-- qH_PROCESS: integer (nullable = true)\n |-- qH_TIMESTAMP_INSERTED: timestamp (nullable = true)\n |-- qH_TIMESTAMP_LASTUPDATED: timestamp (nullable = true)\n |-- qH_BUSINESS_DATE: timestamp (nullable = true)\n |-- qH_DATASOURCE: string (nullable = true)\n |-- qH_SOURCEDATE: date (nullable = true)\n |-- qH_VALID_FROM: date (nullable = true)\n |-- qH_CORRECT_FROM: date (nullable = true)\n |-- qH_IS_VALID: integer (nullable = true)\n |-- qH_ROWID: string (nullable = true)\n\n\u001b[1m\u001b[34mconf\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.conf.Configuration\u001b[0m = Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml, hdfs-default.xml, hdfs-rbf-default.xml, hdfs-site.xml, hdfs-rbf-site.xml, __spark_hadoop_conf__.xml\n\u001b[1m\u001b[34mfs\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.fs.FileSystem\u001b[0m = org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem@4c8b39d6\n\u001b[1m\u001b[34mexists\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n"
+          }
+        ]
+      }
     },
     {
-      "text": "%spark\r\n\r\nval AP_STG = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_STG\")\r\nAP_STG.createOrReplaceTempView(\"MIN_MAX_STG\")\r\nAP_STG.printSchema()",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:04:10+0000",
+      "text": "%spark\r\n\r\nval conf = sc.hadoopConfiguration\r\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\r\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/Min_Max_Checks_T2_STG\"))\r\n\r\nif(exists == false)\r\n{\r\n    val AP_STG = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/Min_Max_Checks_T2_STG\")\r\n    AP_STG.createOrReplaceTempView(\"MIN_MAX_STG\")\r\n    AP_STG.printSchema()\r\n}\r\nelse\r\n{\r\n    val AP_STG = spark.read.load(\"/qh/qhdata/Min_Max_Checks_T2_STG\")\r\n    AP_STG.createOrReplaceTempView(\"MIN_MAX_STG\")\r\n    AP_STG.printSchema()\r\n}",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:51+0000",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -153,20 +207,43 @@
         "forms": {}
       },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=16",
+              "$$hashKey": "object:5531"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_1032867839",
+      "jobName": "paragraph_1639048775312_2019343264",
       "id": "paragraph_1614705739749_2048844703",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:10+0000",
-      "dateFinished": "2021-03-03T17:04:10+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:51+0000",
+      "dateFinished": "2021-12-09T11:25:52+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17935"
+      "$$hashKey": "object:4296",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- MinMax: string (nullable = true)\n |-- Min: string (nullable = true)\n |-- Max: string (nullable = true)\n |-- ExpectedOutcome: string (nullable = true)\n |-- qH_IDENTIFIER: string (nullable = true)\n |-- qH_VERSION: string (nullable = true)\n |-- qH_TIMESTAMP: string (nullable = true)\n |-- qH_DATE: string (nullable = true)\n |-- qH_CATEGORY: string (nullable = true)\n |-- qH_PARTITION_1: string (nullable = true)\n |-- qH_PARTITION_2: string (nullable = true)\n |-- qH_PARTITION_3: string (nullable = true)\n |-- qH_PROCESS: integer (nullable = true)\n |-- qH_TIMESTAMP_INSERTED: timestamp (nullable = true)\n |-- qH_TIMESTAMP_LASTUPDATED: timestamp (nullable = true)\n |-- qH_BUSINESS_DATE: timestamp (nullable = true)\n |-- qH_DATASOURCE: string (nullable = true)\n |-- qH_SOURCEDATE: date (nullable = true)\n |-- qH_VALID_FROM: date (nullable = true)\n |-- qH_CORRECT_FROM: date (nullable = true)\n |-- qH_IS_VALID: integer (nullable = true)\n |-- qH_ROWID: string (nullable = true)\n\n\u001b[1m\u001b[34mconf\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.conf.Configuration\u001b[0m = Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml, hdfs-default.xml, hdfs-rbf-default.xml, hdfs-site.xml, hdfs-rbf-site.xml, __spark_hadoop_conf__.xml\n\u001b[1m\u001b[34mfs\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.fs.FileSystem\u001b[0m = org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem@4c8b39d6\n\u001b[1m\u001b[34mexists\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n"
+          }
+        ]
+      }
     },
     {
-      "text": "%spark\n\nval AP_CMP = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_CMP\")\nAP_CMP.createOrReplaceTempView(\"MIN_MAX_CMP\")\nAP_CMP.printSchema()",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:04:10+0000",
+      "text": "%spark\n\nval conf = sc.hadoopConfiguration\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/Min_Max_Checks_T2_CMP\"))\n\nif(exists == false)\n{\n    val AP_CND = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/Min_Max_Checks_T2_CMP\")\n    AP_CND.createOrReplaceTempView(\"MIN_MAX_CMP\")\n    AP_CND.printSchema()\n}\nelse\n{\n    val AP_CND = spark.read.load(\"/qh/qhdata/Min_Max_Checks_T2_CMP\")\n    AP_CND.createOrReplaceTempView(\"MIN_MAX_CMP\")\n    AP_CND.printSchema()\n}",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:52+0000",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -186,20 +263,43 @@
         "forms": {}
       },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=17",
+              "$$hashKey": "object:5567"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_1242419976",
+      "jobName": "paragraph_1639048775312_1316865732",
       "id": "paragraph_1614706139144_1241918884",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:10+0000",
-      "dateFinished": "2021-03-03T17:04:11+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:52+0000",
+      "dateFinished": "2021-12-09T11:25:52+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17936"
+      "$$hashKey": "object:4297",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- MinMax: decimal(18,8) (nullable = true)\n |-- Min: decimal(18,8) (nullable = true)\n |-- Max: decimal(18,8) (nullable = true)\n |-- ExpectedOutcome: string (nullable = true)\n |-- qH_IDENTIFIER: string (nullable = true)\n |-- qH_VERSION: string (nullable = true)\n |-- qH_TIMESTAMP: date (nullable = true)\n |-- qH_DATE: date (nullable = true)\n |-- qH_CATEGORY: string (nullable = true)\n |-- qH_PARTITION_1: string (nullable = true)\n |-- qH_PARTITION_2: string (nullable = true)\n |-- qH_PARTITION_3: string (nullable = true)\n |-- qH_PROCESS: integer (nullable = true)\n |-- qH_TIMESTAMP_INSERTED: timestamp (nullable = true)\n |-- qH_TIMESTAMP_LASTUPDATED: timestamp (nullable = true)\n |-- qH_BUSINESS_DATE: timestamp (nullable = true)\n |-- qH_DATASOURCE: string (nullable = true)\n |-- qH_SOURCEDATE: date (nullable = true)\n |-- qH_VALID_FROM: date (nullable = true)\n |-- qH_VALID_UNTIL: date (nullable = true)\n |-- qH_CORRECT_FROM: date (nullable = true)\n |-- qH_CORRECT_UNTIL: date (nullable = true)\n |-- qH_IS_VALID: string (nullable = true)\n |-- qH_ROWID: string (nullable = true)\n\n\u001b[1m\u001b[34mconf\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.conf.Configuration\u001b[0m = Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml, hdfs-default.xml, hdfs-rbf-default.xml, hdfs-site.xml, hdfs-rbf-site.xml, __spark_hadoop_conf__.xml\n\u001b[1m\u001b[34mfs\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.fs.FileSystem\u001b[0m = org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem@4c8b39d6\n\u001b[1m\u001b[34mexists\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n"
+          }
+        ]
+      }
     },
     {
-      "text": "%spark\n\nval AP_RCP = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_RCP\")\nAP_RCP.createOrReplaceTempView(\"MIN_MAX_RCP\")\nAP_RCP.printSchema()",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:04:11+0000",
+      "text": "%spark\n\nval conf = sc.hadoopConfiguration\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/Min_Max_Checks_T2_RCP\"))\n\nif(exists == false)\n{\n    val AP_CND = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/Min_Max_Checks_T2_RCP\")\n    AP_CND.createOrReplaceTempView(\"MIN_MAX_RCP\")\n    AP_CND.printSchema()\n}\nelse\n{\n    val AP_CND = spark.read.load(\"/qh/qhdata/Min_Max_Checks_T2_RCP\")\n    AP_CND.createOrReplaceTempView(\"MIN_MAX_RCP\")\n    AP_CND.printSchema()\n}",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:52+0000",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -219,20 +319,43 @@
         "forms": {}
       },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=18",
+              "$$hashKey": "object:5612"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_290341101",
+      "jobName": "paragraph_1639048775312_556180531",
       "id": "paragraph_1614706145601_542810003",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:11+0000",
-      "dateFinished": "2021-03-03T17:04:11+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:52+0000",
+      "dateFinished": "2021-12-09T11:25:53+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17937"
+      "$$hashKey": "object:4298",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- MinMax: string (nullable = true)\n |-- Min: string (nullable = true)\n |-- Max: string (nullable = true)\n |-- ExpectedOutcome: string (nullable = true)\n |-- qH_CATEGORY: string (nullable = true)\n |-- qH_PROCESS: integer (nullable = true)\n |-- qH_BUSINESS_DATE: timestamp (nullable = true)\n |-- qH_DATASOURCE: string (nullable = true)\n |-- qH_SOURCEDATE: date (nullable = true)\n |-- qH_ROWID: string (nullable = true)\n\n\u001b[1m\u001b[34mconf\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.conf.Configuration\u001b[0m = Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml, hdfs-default.xml, hdfs-rbf-default.xml, hdfs-site.xml, hdfs-rbf-site.xml, __spark_hadoop_conf__.xml\n\u001b[1m\u001b[34mfs\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.fs.FileSystem\u001b[0m = org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem@4c8b39d6\n\u001b[1m\u001b[34mexists\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n"
+          }
+        ]
+      }
     },
     {
-      "text": "%spark\r\n\r\nval AP_DUP = spark.read.load(\"/qh/qhdata/MinMax_6_partitions_T2_DUP\")\r\nAP_DUP.createOrReplaceTempView(\"MIN_MAX_DUP\")\r\nAP_DUP.printSchema()",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:04:11+0000",
+      "text": "%spark\r\n\r\nval conf = sc.hadoopConfiguration\r\nval fs = org.apache.hadoop.fs.FileSystem.get(conf)\r\nval exists = fs.exists(new org.apache.hadoop.fs.Path(\"/qh/qhdata/Min_Max_Checks_T2_DUP\"))\r\n\r\nif(exists == false)\r\n{\r\n    val AP_CND = spark.read.load(\"s3a://DEV2DATA/qh/qhdata/Min_Max_Checks_T2_DUP\")\r\n    AP_CND.createOrReplaceTempView(\"MIN_MAX_DUP\")\r\n    AP_CND.printSchema()\r\n}\r\nelse\r\n{\r\n    val AP_CND = spark.read.load(\"/qh/qhdata/Min_Max_Checks_T2_DUP\")\r\n    AP_CND.createOrReplaceTempView(\"MIN_MAX_DUP\")\r\n    AP_CND.printSchema()\r\n}",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:53+0000",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -252,20 +375,43 @@
         "forms": {}
       },
       "apps": [],
-      "runtimeInfos": {},
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=19",
+              "$$hashKey": "object:5648"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_862690139",
+      "jobName": "paragraph_1639048775312_265199456",
       "id": "paragraph_1614706142397_1531678926",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:11+0000",
-      "dateFinished": "2021-03-03T17:04:11+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:53+0000",
+      "dateFinished": "2021-12-09T11:25:54+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17938"
+      "$$hashKey": "object:4299",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- MinMax: string (nullable = true)\n |-- Min: string (nullable = true)\n |-- Max: string (nullable = true)\n |-- ExpectedOutcome: string (nullable = true)\n |-- qH_IDENTIFIER: string (nullable = true)\n |-- qH_VERSION: string (nullable = true)\n |-- qH_TIMESTAMP: string (nullable = true)\n |-- qH_DATE: string (nullable = true)\n |-- qH_CATEGORY: string (nullable = true)\n |-- qH_PARTITION_1: string (nullable = true)\n |-- qH_PARTITION_2: string (nullable = true)\n |-- qH_PARTITION_3: string (nullable = true)\n |-- qH_PROCESS: integer (nullable = true)\n |-- qH_TIMESTAMP_INSERTED: timestamp (nullable = true)\n |-- qH_TIMESTAMP_LASTUPDATED: timestamp (nullable = true)\n |-- qH_BUSINESS_DATE: timestamp (nullable = true)\n |-- qH_DATASOURCE: string (nullable = true)\n |-- qH_SOURCEDATE: date (nullable = true)\n |-- qH_VALID_FROM: date (nullable = true)\n |-- qH_CORRECT_FROM: date (nullable = true)\n |-- qH_IS_VALID: integer (nullable = true)\n |-- qH_ROWID: string (nullable = true)\n\n\u001b[1m\u001b[34mconf\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.conf.Configuration\u001b[0m = Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml, hdfs-default.xml, hdfs-rbf-default.xml, hdfs-site.xml, hdfs-rbf-site.xml, __spark_hadoop_conf__.xml\n\u001b[1m\u001b[34mfs\u001b[0m: \u001b[1m\u001b[32morg.apache.hadoop.fs.FileSystem\u001b[0m = org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem@4c8b39d6\n\u001b[1m\u001b[34mexists\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n"
+          }
+        ]
+      }
     },
     {
       "text": "%spark.sql\nSELECT count(*) FROM MIN_MAX_CND",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:04:42+0000",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:54+0000",
       "config": {
         "editorSetting": {
           "language": "sql",
@@ -321,26 +467,35 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=21",
-              "$$hashKey": "object:18650"
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=20",
+              "$$hashKey": "object:5679"
             }
           ],
           "interpreterSettingId": "spark"
         }
       },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_1959638651",
+      "jobName": "paragraph_1639048775312_1091582380",
       "id": "paragraph_1614705974745_696433505",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:11+0000",
-      "dateFinished": "2021-03-03T17:04:11+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:54+0000",
+      "dateFinished": "2021-12-09T11:25:54+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17939"
+      "$$hashKey": "object:4300",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(1)\n0\n"
+          }
+        ]
+      }
     },
     {
       "text": "%spark.sql\nSELECT count(*) FROM MIN_MAX_ERR",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:04:46+0000",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:54+0000",
       "config": {
         "editorSetting": {
           "language": "sql",
@@ -396,26 +551,35 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=22",
-              "$$hashKey": "object:18698"
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=21",
+              "$$hashKey": "object:5958"
             }
           ],
           "interpreterSettingId": "spark"
         }
       },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_908667537",
+      "jobName": "paragraph_1639048775312_777396184",
       "id": "paragraph_1614705984539_1933511876",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:12+0000",
-      "dateFinished": "2021-03-03T17:04:12+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:54+0000",
+      "dateFinished": "2021-12-09T11:25:55+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17940"
+      "$$hashKey": "object:4301",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(1)\n39\n"
+          }
+        ]
+      }
     },
     {
       "text": "%spark.sql\nSELECT count(*) FROM MIN_MAX_STG",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:05:05+0000",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:55+0000",
       "config": {
         "editorSetting": {
           "language": "sql",
@@ -471,26 +635,35 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=23",
-              "$$hashKey": "object:18746"
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=22",
+              "$$hashKey": "object:6237"
             }
           ],
           "interpreterSettingId": "spark"
         }
       },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_1358950408",
+      "jobName": "paragraph_1639048775312_943201262",
       "id": "paragraph_1614706096809_2145079848",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:12+0000",
-      "dateFinished": "2021-03-03T17:04:12+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:55+0000",
+      "dateFinished": "2021-12-09T11:25:55+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17941"
+      "$$hashKey": "object:4302",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(1)\n56\n"
+          }
+        ]
+      }
     },
     {
       "text": "%spark.sql\nSELECT count(*) FROM MIN_MAX_CMP",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:05:13+0000",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:55+0000",
       "config": {
         "editorSetting": {
           "language": "sql",
@@ -586,26 +759,35 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=24",
-              "$$hashKey": "object:18794"
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=23",
+              "$$hashKey": "object:6507"
             }
           ],
           "interpreterSettingId": "spark"
         }
       },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_478983858",
+      "jobName": "paragraph_1639048775312_1072619066",
       "id": "paragraph_1614078694721_539933534",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:12+0000",
-      "dateFinished": "2021-03-03T17:04:13+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:55+0000",
+      "dateFinished": "2021-12-09T11:25:56+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17942"
+      "$$hashKey": "object:4303",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(1)\n0\n"
+          }
+        ]
+      }
     },
     {
       "text": "%spark.sql\n\nSELECT count(*) FROM MIN_MAX_RCP",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:05:41+0000",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:56+0000",
       "config": {
         "editorSetting": {
           "language": "sql",
@@ -660,26 +842,35 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=25",
-              "$$hashKey": "object:18842"
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=24",
+              "$$hashKey": "object:6777"
             }
           ],
           "interpreterSettingId": "spark"
         }
       },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_1225340502",
+      "jobName": "paragraph_1639048775312_1088054035",
       "id": "paragraph_1614698167338_1405599675",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:13+0000",
-      "dateFinished": "2021-03-03T17:04:13+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:56+0000",
+      "dateFinished": "2021-12-09T11:25:56+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17943"
+      "$$hashKey": "object:4304",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(1)\n56\n"
+          }
+        ]
+      }
     },
     {
       "text": "%spark.sql\n\nSELECT count(*) FROM MIN_MAX_DUP",
-      "user": "admin",
-      "dateUpdated": "2021-03-03T17:05:37+0000",
+      "user": "qhautomation",
+      "dateUpdated": "2021-12-09T11:25:56+0000",
       "config": {
         "editorSetting": {
           "language": "sql",
@@ -735,25 +926,34 @@
           "group": "spark",
           "values": [
             {
-              "jobUrl": "http://10.93.39.191:4041/jobs/job?id=26",
-              "$$hashKey": "object:18890"
+              "jobUrl": "http://10.244.0.210:4040/jobs/job?id=25",
+              "$$hashKey": "object:6889"
             }
           ],
           "interpreterSettingId": "spark"
         }
       },
       "progressUpdateIntervalMs": 500,
-      "jobName": "paragraph_1614789543410_1944039500",
+      "jobName": "paragraph_1639048775312_700194585",
       "id": "paragraph_1614705808952_9764200",
-      "dateCreated": "2021-03-03T16:39:03+0000",
-      "dateStarted": "2021-03-03T17:04:13+0000",
-      "dateFinished": "2021-03-03T17:04:13+0000",
+      "dateCreated": "2021-12-09T11:19:35+0000",
+      "dateStarted": "2021-12-09T11:25:56+0000",
+      "dateFinished": "2021-12-09T11:25:57+0000",
       "status": "FINISHED",
-      "$$hashKey": "object:17944"
+      "$$hashKey": "object:4305",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "count(1)\n56\n"
+          }
+        ]
+      }
     }
   ],
   "name": "T2_Min_Max_Checks_Notebook",
-  "id": "2FZF8P27N",
+  "id": "2GRTA9NZQ",
   "defaultInterpreterGroup": "spark",
   "version": "0.9.0-preview2",
   "noteParams": {},
